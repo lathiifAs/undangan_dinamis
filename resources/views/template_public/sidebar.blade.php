@@ -16,6 +16,16 @@
                 <ul class="submenu">
                     <li><a href="elements.html">Berita</a></li>
                     <li><a href="blog.html">Mekanisme Pengurusan Berkas</a></li>
+                    <li><a href="blog.html">Layanan Pengaduan (Saran Kritik)</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Informasi Pendidikan</a>
+                <ul class="submenu">
+                    <li><a href="elements.html">PAUD</a></li>
+                    <li><a href="blog.html">TK</a></li>
+                    <li><a href="blog.html">SD / MI</a></li>
+                    <li><a href="blog.html">SMP / MTS</a></li>
+                    <li><a href="blog.html">SMA / SMK / MA</a></li>
                 </ul>
             </li>
             <li><a href="#">Galeri</a>
@@ -27,6 +37,7 @@
             <li><a href="#">Link Terkait</a>
                 <ul class="submenu">
                     <li><a href="elements.html">Badan Pemusyawaratan Desa</a></li>
+                    <li><a href="blog.html">Badan Usaha Milik Desa</a></li>
                     <li><a href="blog.html">Pemberdayaan dan Kesejahteraan Keluarga</a></li>
                     <li><a href="blog.html">Babinsa</a></li>
                     <li><a href="blog.html">Badan Keswadayaan Masyarakat</a></li>
@@ -36,7 +47,6 @@
                     <li><a href="blog.html">Pos Pelayanan Terpadu Lansia</a></li>
                     <li><a href="blog.html">Pos Bindu</a></li>
                     <li><a href="blog.html">Pos Kesehatan Desa</a></li>
-                    <li><a href="blog.html">Informasi Pendidikan</a></li>
                     <li><a href="blog.html">Karang Taruna</a></li>
                 </ul>
             </li>

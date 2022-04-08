@@ -6,7 +6,6 @@
         <title>Desa Karangsong - Indramayu </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="{{ URL('public_template/assets/img/favicon.ico')}}">
 
 		<!-- CSS here -->
@@ -38,19 +37,39 @@
         </div>
     </div> -->
     <!-- Preloader Start -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
 
+    $(document).ready(function () {
+        display_ct();
+    });
+
+    function display_c(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_ct()',refresh)
+    }
+
+    function display_ct() {
+        var x = new Date()
+        document.getElementById('ct').innerHTML = x;
+        display_c();
+    }
+    </script>
     <header>
         <!-- Header Start -->
        <div class="header-area">
             <div class="main-header ">
                 <div class="header-top black-bg d-none d-md-block">
                    <div class="container">
+                       @php
+                           $mytime = Carbon\Carbon::now();
+                       @endphp
                        <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
                                     <ul>
                                         <li><img src="{{ URL('public_template/assets/img/icon/header_icon1.png')}}" alt="">34ºc, Sunny </li>
-                                        <li><img src="{{ URL('public_template/assets/img/icon/header_icon1.png')}}" alt="">Tuesday, 18th June, 2019</li>
+                                        <li><img src="{{ URL('public_template/assets/img/icon/sand-clock.png')}}" alt="" height="20px"><label for="" id="ct" class="text-white"> </label></li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
@@ -126,7 +145,7 @@
                             <div class="single-footer-caption">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="{{ URL('public_template/assets/img/logo/logo2_footer.png')}}" alt=""></a>
+                                    <a href="index.html"><img src="{{ URL('public_template/assets/img/icon/logo-karangsong-white.png')}}" height="100px" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -194,7 +213,7 @@
                         <div class="col-lg-6">
                             <div class="footer-copy-right">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://dayutekno.com" target="_blank">Darma Ayu Tekno</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                         </div>
