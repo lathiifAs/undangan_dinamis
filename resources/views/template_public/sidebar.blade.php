@@ -1,14 +1,14 @@
 <div class="main-menu d-none d-md-block">
     <nav>
         <ul id="navigation">
-            <li><a href="index.html">Beranda</a></li>
+            <li><a href="{{ ('/') }}">Beranda</a></li>
             <li><a href="#">Profil Desa</a>
                 <ul class="submenu">
-                    <li><a href="elements.html">Visi & Misi</a></li>
-                    <li><a href="blog.html">Perangkat Desa</a></li>
+                    <li><a  href="{{ ('/visi_misi') }}">Visi & Misi</a></li>
+                    <li><a href="{{ ('/perangkat_desa') }}">Perangkat Desa</a></li>
                     <li><a href="single-blog.html">Demografi Penduduk</a></li>
                     <li><a href="details.html">Fasilitas Umum</a></li>
-                    <li><a href="details.html">Anggaran Desa</a></li>
+                    <li><a href="{{ ('/anggaran_dana') }}">Anggaran Desa</a></li>
                 </ul>
             </li>
             <li><a href="categori.html">Potensi Desa</a></li>

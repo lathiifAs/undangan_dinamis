@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/visi_misi', function () {
+    return view('visi_misi');
+});
+
+Route::get('/perangkat_desa', function () {
+    return view('perangkat_desa');
+});
+
+Route::get('/anggaran_dana', function () {
+    return view('anggaran_dana');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
