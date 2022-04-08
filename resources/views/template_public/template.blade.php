@@ -149,7 +149,7 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for sectetuer.</p>
+                                        <p>Jl. Pantai Song, Karangsong, Kec. Indramayu, Kabupaten Indramayu, Jawa Barat 45219.</p>
                                     </div>
                                 </div>
                                 <!-- social -->
@@ -164,8 +164,8 @@
                     <div class="col-xl-3 col-lg-3 col-md-4  col-sm-6">
                         <div class="single-footer-caption mt-60">
                             <div class="footer-tittle">
-                                <h4>Newsletter</h4>
-                                <p>Heaven fruitful doesn't over les idays appear creeping</p>
+                                <h4>Berita Terbaru</h4>
+                                <p>Subscribe untuk mendapatkan notifikasi berita terbaru.</p>
                                 <!-- Form -->
                                 <div class="footer-form" >
                                     <div id="mc_embed_signup">

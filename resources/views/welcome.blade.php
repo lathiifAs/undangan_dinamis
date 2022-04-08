@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                         </div> --}}
-                            {{-- <!-- Trending Bottom -->
+                            <!-- Trending Bottom -->
                             <div class="trending-bottom">
                                 <div class="row">
                                     <div class="col-lg-4">
@@ -116,7 +116,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
                         </div>
                         <!-- Riht content -->
                         <!-- <div class="col-lg-4">

@@ -6,17 +6,17 @@
                 <ul class="submenu">
                     <li><a  href="{{ ('/visi_misi') }}">Visi & Misi</a></li>
                     <li><a href="{{ ('/perangkat_desa') }}">Perangkat Desa</a></li>
-                    <li><a href="single-blog.html">Demografi Penduduk</a></li>
-                    <li><a href="details.html">Fasilitas Umum</a></li>
+                    <li><a href="{{ ('/demografis') }}">Demografi Penduduk</a></li>
+                    <li><a href="{{ ('/fasilitas_umum') }}">Fasilitas Umum</a></li>
                     <li><a href="{{ ('/anggaran_dana') }}">Anggaran Desa</a></li>
                 </ul>
             </li>
-            <li><a href="categori.html">Potensi Desa</a></li>
+            <li><a href="{{ ('/potensi_desa') }}">Potensi Desa</a></li>
             <li><a href="#">Informasi</a>
                 <ul class="submenu">
-                    <li><a href="elements.html">Berita</a></li>
+                    <li><a href="{{ ('/berita') }}">Berita</a></li>
                     <li><a href="blog.html">Mekanisme Pengurusan Berkas</a></li>
-                    <li><a href="blog.html">Layanan Pengaduan (Saran Kritik)</a></li>
+                    <li><a href="{{ ('/layanan_pengaduan') }}">Layanan Pengaduan (Saran Kritik)</a></li>
                 </ul>
             </li>
             <li><a href="#">Informasi Pendidikan</a>
