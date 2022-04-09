@@ -56,6 +56,37 @@ Route::get('/layanan_pengaduan', function () {
 
 
 
+
+Route::get('/paud', function () {
+    return view('paud');
+});
+
+Route::get('/tk', function () {
+    return view('tk');
+});
+
+Route::get('/sd_mi', function () {
+    return view('sd_mi');
+});
+
+Route::get('/smp_mts', function () {
+    return view('smp_mts');
+});
+
+Route::get('/sma_smk_ma', function () {
+    return view('sma_smk_ma');
+});
+
+Route::get('/foto_desa', function () {
+    return view('foto_desa');
+});
+
+Route::get('/foto_kegiatan', function () {
+    return view('foto_kegiatan');
+});
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

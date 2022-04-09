@@ -21,17 +21,17 @@
             </li>
             <li><a href="#">Informasi Pendidikan</a>
                 <ul class="submenu">
-                    <li><a href="elements.html">PAUD</a></li>
-                    <li><a href="blog.html">TK</a></li>
-                    <li><a href="blog.html">SD / MI</a></li>
-                    <li><a href="blog.html">SMP / MTS</a></li>
-                    <li><a href="blog.html">SMA / SMK / MA</a></li>
+                    <li><a href="{{ ('/paud') }}">PAUD</a></li>
+                    <li><a href="{{ ('/tk') }}">TK</a></li>
+                    <li><a href="{{ ('/sd_mi') }}">SD / MI</a></li>
+                    <li><a href="{{ ('/smp_mts') }}">SMP / MTS</a></li>
+                    <li><a href="{{ ('/sma_smk_ma') }}">SMA / SMK / MA</a></li>
                 </ul>
             </li>
             <li><a href="#">Galeri</a>
                 <ul class="submenu">
-                    <li><a href="elements.html">Foto Desa</a></li>
-                    <li><a href="blog.html">Foto Kegiatan</a></li>
+                    <li><a href="{{ ('/foto_desa') }}">Foto Desa</a></li>
+                    <li><a href="{{ ('/foto_kegiatan') }}">Foto Kegiatan</a></li>
                 </ul>
             </li>
             <li><a href="#">Link Terkait</a>
@@ -50,7 +50,7 @@
                     <li><a href="blog.html">Karang Taruna</a></li>
                 </ul>
             </li>
-            <li><a href="categori.html">Login</a></li>
+            <li><a href="{{ ('/login') }}">Login</a></li>
         </ul>
     </nav>
 </div>

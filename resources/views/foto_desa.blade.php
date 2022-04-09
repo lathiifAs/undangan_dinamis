@@ -9,36 +9,40 @@
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <h3 class="mb-30">Isi form berikut dengan benar.</h3>
-                                <form action="#">
-                                    <div class="mt-10">
-                                        <input type="text" name="first_name" placeholder="Nama Lengkap"
-                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Lengkap'"
-                                            required class="single-input">
+                                <a href="#" class="blog_item_date">
+                                    <h3>Foto Desa</h3>
+                                </a>
+                            </div>
+
+                            <div class="blog_details row">
+                                <div class="card m-3" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{ URL('public_template/assets/img/desa/desa.jpg') }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lokasi A</h5>
+                                        <p class="card-text">Jl karangsong blok sawah sekotak RT.4 RW.01. No.269</p>
                                     </div>
-                                    <div class="mt-10">
-                                        <input type="text" name="last_name" placeholder="No. Hp"
-                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'No. Hp'" required
-                                            class="single-input">
+                                </div>
+                                <div class="card m-3" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{ URL('public_template/assets/img/desa/desa.jpg') }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lokasi B</h5>
+                                        <p class="card-text">Jl karangsong blok sawah sekotak RT.4 RW.01. No.269</p>
                                     </div>
-                                    <div class="mt-10">
-                                        <textarea class="single-textarea" placeholder="Alamat" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Alamat'" required></textarea>
+                                </div>
+                                <div class="card m-3" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{ URL('public_template/assets/img/desa/desa.jpg') }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lokasi C</h5>
+                                        <p class="card-text">Jl karangsong blok sawah sekotak RT.4 RW.01. No.269</p>
                                     </div>
-                                    <div class="mt-10">
-                                        <input type="file" name="file" placeholder="Foto"
-                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Foto'"
-                                            required class="single-input">
+                                </div>
+                                <div class="card m-3" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{ URL('public_template/assets/img/desa/desa.jpg') }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lokasi D</h5>
+                                        <p class="card-text">Jl karangsong blok sawah sekotak RT.4 RW.01. No.269</p>
                                     </div>
-                                    <div class="mt-10">
-                                        <textarea class="single-textarea" placeholder="Keterangan Aduan / Saran" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Keterangan Aduan / Saran'" required></textarea>
-                                    </div>
-                                    <div class="text-right mt-4">
-                                        <button class="button rounded-0 primary-bg text-white w-10 btn_1 boxed-btn"
-                                        type="submit">Kirim</button>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </article>
                     </div>
