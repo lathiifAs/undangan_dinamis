@@ -29,19 +29,19 @@
                             <div id="carouselExampleControls" class="carousel slide mb-4" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="{{ URL('public_template/assets/img/banner/islamic_center.jpg') }}"
+                                        <img src="{{ URL('public_template/assets/img/banner/kantor_1.jpeg') }}"
                                             height="500px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
-                                            <h5 class="text-white">Islamic Center Indramayu</h5>
-                                            <p class="text-white text-mute">Pusat Ibadah Warga Indramayu</p>
+                                            <h5 class="text-white">Kantor Desa Karangsong</h5>
+                                            <p class="text-white text-mute"></p>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{ URL('public_template/assets/img/banner/pulau_biawak2.jpg') }}"
+                                        <img src="{{ URL('public_template/assets/img/banner/kantor_2.jpeg') }}"
                                             height="500px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
-                                            <h5 class="text-white">Pulau Biawak</h5>
-                                            <p class="text-white text-mute">Destinasi Alam Terbaik di Indramayu.</p>
+                                            <h5 class="text-white">Kantor Desa Karangsong</h5>
+                                            <p class="text-white text-mute"></p>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
@@ -433,12 +433,16 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-tittle mb-30">
-                                <h3>Badan Permusyawaratan Desa</h3>
+                                <h3>Struktur Organisasi Desa dan BPD</h3>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-4">
+                            <img src="{{ URL('public_template/assets/img/struktur/desa.jpeg') }}" height="90%" class="w-100"
+                                alt="">
+                        </div>
+                        <div class="col-8">
                             <img src="{{ URL('public_template/assets/img/struktur/bpd.jpg') }}" class="w-100"
                                 alt="">
                         </div>
