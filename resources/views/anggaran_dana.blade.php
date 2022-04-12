@@ -15,7 +15,7 @@
                                 </div>
 
                                 <div class="blog_details">
-                                    <canvas id="myChart" width="400" height="400"></canvas>
+                                    <canvas id="myChart" width="400" height="300"></canvas>
                                 </div>
 
                                 <div class="blog_details">
