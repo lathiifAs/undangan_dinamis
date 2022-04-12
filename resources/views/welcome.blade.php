@@ -64,6 +64,8 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
+
+
                             {{-- <div class="trending-top mb-30">
                             <div class="trend-top-img">
                                 <img src="{{ URL('public_template/assets/img/gallery/karangsong.jpeg')}}" height="520px" alt="">
@@ -74,7 +76,7 @@
                             </div>
                         </div> --}}
                             <!-- Trending Bottom -->
-                            <div class="trending-bottom">
+                            {{-- <div class="trending-bottom">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="single-bottom mb-35">
@@ -116,7 +118,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- Riht content -->
                         <!-- <div class="col-lg-4">
@@ -425,6 +427,26 @@
         </section>
         <!-- Whats New End -->
 
+        <div class="weekly-news-area pt-50">
+            <div class="container">
+                <div class="weekly-wrapper">
+                    <!-- section Tittle -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-tittle mb-30">
+                                <h3>Anggaran APBDes Pertahun</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <canvas id="myChart" width="300" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--   Weekly-News start -->
         <div class="weekly-news-area pt-50">
             <div class="container">
@@ -450,7 +472,11 @@
                 </div>
             </div>
         </div>
+
+
+
         <!-- End Weekly-News -->
+{{--
 
                 <!--   Weekly2-News start -->
                 <div class="weekly2-news-area  weekly2-pading gray-bg">
@@ -474,7 +500,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Weekly-News -->
+                <!-- End Weekly-News --> --}}
 
         <!--   Weekly2-News start -->
         <div class="weekly2-news-area  weekly2-pading gray-bg">
@@ -732,6 +758,9 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC87B6-SQkeq3eHIt6R6kbapYjZsEhJd6I&callback=initMap" async
   defer>
   </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 {{--
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC87B6-SQkeq3eHIt6R6kbapYjZsEhJd6I&callback=initMap">
@@ -850,7 +879,50 @@
 
         // }
 
-    </script>
+
+//    chart
+        const ctx = $('#myChart');
+        const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022'],
+            datasets: [{
+                label: 'DD',
+                data: [10, 20, 30, 40, 50, 60, 70],
+                fill: false,
+                borderColor: 'rgb(255,0,0)',
+                tension: 0.1
+            },
+            {
+                label: 'ADD',
+                data: [10, 30, 40, 20, 40, 40, 50],
+                fill: false,
+                borderColor: 'rgb(0,206,209)',
+                tension: 0.1
+            },
+            {
+                label: 'PADes',
+                data: [10, 20, 30, 30, 50, 50, 60],
+                fill: false,
+                borderColor: 'rgb(50,205,50)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart APBDes Pertahun'
+            }
+            }
+        },
+    });
+
+   </script>
 
   @endpush
 

@@ -89,7 +89,7 @@
                             <!-- Logo -->
                             <div class="col-xl-3 col-lg-3 col-md-3">
                                 <div class="logo">
-                                    <a href="index.html"><img src="<?php echo e(URL('public_template/assets/img/icon/logo_karangsong.png')); ?>" width="230px" alt=""></a>
+                                    <a href="index.html"><img src="<?php echo e(URL('public_template/assets/img/icon/logo_karangsong_2.png')); ?>" width="230px" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
@@ -106,7 +106,7 @@
                             <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                                 <!-- sticky -->
                                     <div class="sticky-logo">
-                                        <a href="index.html"><img src="<?php echo e(URL('public_template/assets/img/icon/logo_karangsong.png')); ?>"  width="230px" alt=""></a>
+                                        <a href="index.html"><img src="<?php echo e(URL('public_template/assets/img/icon/logo_karangsong_2.png')); ?>"  width="230px" alt=""></a>
                                     </div>
                                 <!-- Main-menu -->
                                 <?php echo $__env->make('template_public.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -145,11 +145,11 @@
                             <div class="single-footer-caption">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="<?php echo e(URL('public_template/assets/img/icon/logo-karangsong-white.png')); ?>" height="100px" alt=""></a>
+                                    <a href="index.html"><img src="<?php echo e(URL('public_template/assets/img/icon/logo-karangsong-white-2.png')); ?>" height="100px" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for sectetuer.</p>
+                                        <p>Jl. Pantai Song, Karangsong, Kec. Indramayu, Kabupaten Indramayu, Jawa Barat 45219.</p>
                                     </div>
                                 </div>
                                 <!-- social -->
@@ -164,8 +164,8 @@
                     <div class="col-xl-3 col-lg-3 col-md-4  col-sm-6">
                         <div class="single-footer-caption mt-60">
                             <div class="footer-tittle">
-                                <h4>Newsletter</h4>
-                                <p>Heaven fruitful doesn't over les idays appear creeping</p>
+                                <h4>Berita Terbaru</h4>
+                                <p>Subscribe untuk mendapatkan notifikasi berita terbaru.</p>
                                 <!-- Form -->
                                 <div class="footer-form" >
                                     <div id="mc_embed_signup">
