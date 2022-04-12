@@ -89,7 +89,7 @@
                             <!-- Logo -->
                             <div class="col-xl-3 col-lg-3 col-md-3">
                                 <div class="logo">
-                                    <a href="index.html"><img src="{{ URL('public_template/assets/img/icon/logo_karangsong.png')}}" width="230px" alt=""></a>
+                                    <a href="index.html"><img src="{{ URL('public_template/assets/img/icon/logo_karangsong_2.png')}}" width="230px" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
@@ -106,7 +106,7 @@
                             <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                                 <!-- sticky -->
                                     <div class="sticky-logo">
-                                        <a href="index.html"><img src="{{ URL('public_template/assets/img/icon/logo_karangsong.png')}}"  width="230px" alt=""></a>
+                                        <a href="index.html"><img src="{{ URL('public_template/assets/img/icon/logo_karangsong_2.png')}}"  width="230px" alt=""></a>
                                     </div>
                                 <!-- Main-menu -->
                                 @include('template_public.sidebar')
@@ -145,7 +145,7 @@
                             <div class="single-footer-caption">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="{{ URL('public_template/assets/img/icon/logo-karangsong-white.png')}}" height="100px" alt=""></a>
+                                    <a href="index.html"><img src="{{ URL('public_template/assets/img/icon/logo-karangsong-white-2.png')}}" height="100px" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

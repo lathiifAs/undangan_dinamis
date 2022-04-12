@@ -4,6 +4,7 @@
             <li><a href="{{ ('/') }}">Beranda</a></li>
             <li><a href="#">Profil Desa</a>
                 <ul class="submenu">
+                    <li><a  href="{{ ('/visi_misi') }}">Sejarah</a></li>
                     <li><a  href="{{ ('/visi_misi') }}">Visi & Misi</a></li>
                     <li><a href="{{ ('/perangkat_desa') }}">Perangkat Desa</a></li>
                     <li><a href="{{ ('/demografis') }}">Demografi Penduduk</a></li>
@@ -12,13 +13,6 @@
                 </ul>
             </li>
             <li><a href="{{ ('/potensi_desa') }}">Potensi Desa</a></li>
-            <li><a href="#">Informasi</a>
-                <ul class="submenu">
-                    <li><a href="{{ ('/berita') }}">Berita</a></li>
-                    <li><a href="blog.html">Mekanisme Pengurusan Berkas</a></li>
-                    <li><a href="{{ ('/layanan_pengaduan') }}">Layanan Pengaduan (Saran Kritik)</a></li>
-                </ul>
-            </li>
             <li><a href="#">Informasi Pendidikan</a>
                 <ul class="submenu">
                     <li><a href="{{ ('/paud') }}">PAUD</a></li>
@@ -28,18 +22,24 @@
                     <li><a href="{{ ('/sma_smk_ma') }}">SMA / SMK / MA</a></li>
                 </ul>
             </li>
+            <li><a href="#">Informasi</a>
+                <ul class="submenu">
+                    <li><a href="{{ ('/berita') }}">Berita</a></li>
+                    <li><a href="blog.html">Mekanisme Pengurusan Berkas</a></li>
+                    <li><a href="{{ ('/layanan_pengaduan') }}">Layanan Pengaduan (Saran Kritik)</a></li>
+                </ul>
+            </li>
             <li><a href="#">Galeri</a>
                 <ul class="submenu">
-                    <li><a href="{{ ('/foto_desa') }}">Foto Desa</a></li>
-                    <li><a href="{{ ('/foto_kegiatan') }}">Foto Kegiatan</a></li>
+                    <li><a href="{{ ('/foto_desa') }}">Foto & Video Desa</a></li>
+                    <li><a href="{{ ('/foto_kegiatan') }}">Foto & Video Kegiatan</a></li>
                 </ul>
             </li>
             <li><a href="#">Link Terkait</a>
                 <ul class="submenu">
-                    <li><a href="elements.html">Badan Pemusyawaratan Desa</a></li>
-                    <li><a href="blog.html">Badan Usaha Milik Desa</a></li>
-                    <li><a href="blog.html">Pemberdayaan dan Kesejahteraan Keluarga</a></li>
-                    <li><a href="blog.html">Babinsa</a></li>
+                    <li><a href="elements.html">BPD</a></li>
+                    <li><a href="blog.html">BUMD</a></li>
+                    <li><a href="blog.html">PKK</a></li>
                     <li><a href="blog.html">Badan Keswadayaan Masyarakat</a></li>
                     <li><a href="blog.html">Perlindungan Masyarakat</a></li>
                     <li><a href="blog.html">Kader Pemberdayaan Masyarakat Desa</a></li>
