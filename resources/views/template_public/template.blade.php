@@ -274,6 +274,7 @@
         <script src="{{ URL('/public_template/assets/js/plugins.js')}}"></script>
         <script src="{{ URL('/public_template/assets/js/main.js')}}"></script>
 
+
         @stack('custom-scripts')
 
 
