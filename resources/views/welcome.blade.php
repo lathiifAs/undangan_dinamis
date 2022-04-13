@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="trending-main">
                     <!-- Trending Tittle -->
-                    <div class="row">
+                    <div class="row" style="margin-top: -20px">
                         <div class="col-lg-12">
                             <div class="trending-tittle">
                                 <strong>Trending Saat Ini</strong>
@@ -30,7 +30,7 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="{{ URL('public_template/assets/img/banner/kantor_1.jpeg') }}"
-                                            height="500px" class="d-block w-100" alt="">
+                                            height="380px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
                                             <h5 class="text-white">Kantor Desa Karangsong</h5>
                                             <p class="text-white text-mute"></p>
@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <img src="{{ URL('public_template/assets/img/banner/kantor_2.jpeg') }}"
-                                            height="500px" class="d-block w-100" alt="">
+                                            height="380px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
                                             <h5 class="text-white">Kantor Desa Karangsong</h5>
                                             <p class="text-white text-mute"></p>
@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <img src="{{ URL('public_template/assets/img/banner/hutan_mangrove.jpg') }}"
-                                            height="500px" class="d-block w-100" alt="">
+                                            height="380px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
                                             <h5 class="text-white">Hutam Mangrove</h5>
                                             <p class="text-white text-mute">Eko Wisata Karangsong yang Rindang.</p>
@@ -175,7 +175,7 @@
         <!-- Trending Area End -->
 
         <!-- Whats New Start -->
-        <section class="whats-news-area pt-50 pb-20">
+        <section class="whats-news-area pt-10 pb-20">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
