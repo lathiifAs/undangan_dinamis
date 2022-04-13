@@ -485,7 +485,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-tittle mb-30">
-                                <h3>Letak Darurat</h3>
+                                <h3>Laporan Posisi Darurat</h3>
                             </div>
                         </div>
                     </div>
