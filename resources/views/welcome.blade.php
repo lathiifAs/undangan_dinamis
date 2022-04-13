@@ -817,8 +817,8 @@
                 var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
                 var s = 0;
                 var kplLoc = [
-                    {long: -6.515176, lat:108.347497},
-                    {long: -6.515176, lat:108.361589}
+                    {long: -6.304316, lat:108.361589},
+                    {long: -6.310249, lat:108.351699}
                 ];
 
                 // membuat icon berkedip
