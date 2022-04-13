@@ -817,7 +817,7 @@
                 var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
                 var s = 0;
                 var kplLoc = [
-                    {long: -6.315176, lat:108.347497},
+                    {long: -6.515176, lat:108.347497},
                     {long: -6.515176, lat:108.361589}
                 ];
 
