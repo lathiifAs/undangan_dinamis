@@ -483,32 +483,17 @@
                 <div class="weekly2-wrapper">
                     <!-- section Tittle -->
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-tittle mb-30">
-                                <h3>Laporan Posisi Darurat</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="map_canvas" style="width:100%; height:600px"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- End Weekly-News -->
-
-        <div class="weekly2-news-area  weekly2-pading gray-bg">
-            <div class="container">
-                <div class="weekly2-wrapper">
-                    <!-- section Tittle -->
-                    <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="section-tittle mb-30">
                                 <h3>Letak Geografis Desa</h3>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <h3>Laporan Posisi Darurat</h3>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-lg-6">
                             <div class="mapouter">
                                 <div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas"
                                         src="https://maps.google.com/maps?q=karangsong&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -535,12 +520,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="section-tittle mb-30">
+                                <div id="map_canvas" style="width:100%; height:400px"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!--   Weekly2-News start -->
 
         <!-- End Weekly-News -->
         {{-- <!-- Start Youtube -->
@@ -809,9 +797,9 @@
                 var icon_st;
                 var seconds = 0;
 
-                var myLatlng = new google.maps.LatLng(-6.187590, 108.428183);
+                var myLatlng = new google.maps.LatLng(-6.304316, 108.361589);
                 var mapOptions = {
-                    zoom: 10,
+                    zoom: 12,
                     center: myLatlng,
                 }
                 var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
