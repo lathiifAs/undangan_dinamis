@@ -818,7 +818,7 @@
                 var s = 0;
                 var kplLoc = [
                     {long: -6.315176, lat:108.347497},
-                    {long: -6.515176, lat:108.347497}
+                    {long: -6.515176, lat:108.361589}
                 ];
 
                 // membuat icon berkedip
