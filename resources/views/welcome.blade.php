@@ -489,7 +489,9 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h3>Laporan Posisi Darurat</h3>
+                            <div class="section-tittle mb-30">
+                                <h3>Laporan Posisi Darurat</h3>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
