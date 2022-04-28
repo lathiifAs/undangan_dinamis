@@ -56,7 +56,7 @@
                                         <canvas id="pengajuan_bulan" height="350"></canvas>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-5">
                                     <div class="col-lg-12">
                                         <canvas id="penilaian" height="150"></canvas>
                                     </div>
@@ -116,7 +116,7 @@
                         },
                         title: {
                             display: true,
-                            text: 'Chart Pengajuan RT Perhari'
+                            text: 'Grafik Pengajuan RT Perhari'
                         }
                     }
                 },
@@ -155,7 +155,7 @@
                         },
                         title: {
                             display: true,
-                            text: 'Chart Pengajuan RT Bulan - April'
+                            text: 'Grafik Pengajuan RT Bulan - April'
                         }
                     }
                 },
@@ -195,7 +195,7 @@
                         },
                         title: {
                             display: true,
-                            text: 'Chart Pengajuan RT Bulan - April'
+                            text: 'Grafik Pengajuan RT Bulan - April'
                         }
                     }
                 },
