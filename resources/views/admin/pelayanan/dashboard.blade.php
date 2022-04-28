@@ -224,7 +224,7 @@
                         },
                         title: {
                             display: true,
-                            text: 'Chart Penilaian RT Perbulan'
+                            text: 'Grafik Penilaian RT Perbulan'
                         }
                     }
                 },
