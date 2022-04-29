@@ -135,7 +135,7 @@
                                         </div>
                                         <div class="col-lg-6" id="div_gol_darah">
                                             <label for="">Gol. Darah</label>
-                                            <input type="text" required class="form-control" name="gol_darah" id="gol_darah"
+                                            <input type="text" class="form-control" name="gol_darah" id="gol_darah"
                                                 placeholder="Gol Darah">
                                         </div>
                                     </div>
