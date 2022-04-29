@@ -59,6 +59,9 @@ class RtMasterWargaController extends Controller
             'st_kawin' => $request->st_kawin,
             'kewarganegaraan' => $request->kewarganegaraan,
             'alamat' => $request->alamat,
+            'vaksin_level' => $request->vaksin_level,
+            'listrik' => $request->listrik,
+            'pdam' => $request->pdam,
         ]);
 
         if ($send) {

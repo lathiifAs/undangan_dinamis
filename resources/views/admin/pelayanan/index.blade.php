@@ -152,6 +152,7 @@
                                                 </td>
 
                                                 <td style="text-align: center">
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#ratingModal" class="btn btn-icon btn-outline-warning"><i class="fa fa-star-half" aria-hidden="true"></i></a>
                                                     <a href="" class="btn btn-icon btn-outline-primary"><i class="fa fa-file"></i></a>
                                                     <button class="btn btn-icon btn-info"><i class="fa fa-eye"></i></button>
                                                     <button class="btn btn-icon btn-warning"><i class="fa fa-edit"></i></button>
@@ -170,7 +171,10 @@
 
                                         </tbody>
                                     </table>
+
+
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -181,8 +185,32 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Berikan Penilaian</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <div id="basic" style="font-size:40px"></div>
+            <label for="" id="rating_pick"></label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-success">Kirim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 @push('custom-scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ URL('admin_template/assets/plugins/rating/rating.js')}}"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         var select2 = $('.js-example-basic-single').select2({
@@ -190,6 +218,15 @@
             dropdownCssClass: "bigdrop"
         });
         select2.data('select2').$selection.css('height', '43px');
+
+    });
+
+    $("#basic").rating({
+        "click": function (e) {
+            console.log(e); // {stars: 3, event: E.Event}
+            // alert(e.stars); // 3
+            $('#rating_pick').html('Anda Memilih ' + e.stars + ' bintang');
+        }
     });
     </script>
 @endpush

@@ -64,6 +64,9 @@
         <li class="nav-item pcoded-menu-caption">
             <label>Kepengurusan RT</label>
         </li>
+        <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item {{ Request::segment(1) . '/'. Request::segment(2) == 'admin/master_warga' ? 'active' : '' }}">
+            <a href="{{ route('admin/master_warga') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Master Data Warga</span></a>
+        </li>
         <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item  {{ Request::segment(1) . '/'. Request::segment(2) == 'admin/pelayanan_grafik' || Request::segment(1) . '/'. Request::segment(2) == 'admin/pelayanan' ? 'active pcoded-trigger' : '' }} pcoded-hasmenu ">
             <a href="javascript:" class="nav-link"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pelayanan RT</span></a>
             <ul class="pcoded-submenu">
@@ -71,20 +74,17 @@
                 <li class="{{ Request::segment(1) . '/'. Request::segment(2) == 'admin/pelayanan' ? 'active' : '' }}"><a href="{{ route('admin/pelayanan') }}" class="">Pengajuan Pelayanan</a></li>
             </ul>
         </li>
-        <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item {{ Request::segment(1) . '/'. Request::segment(2) == 'admin/master_warga' ? 'active' : '' }}">
-            <a href="{{ route('admin/master_warga') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Master Data Warga</span></a>
-        </li>
     @endif
 
     @if (Auth::user()->role  == 'rt')
         <li class="nav-item pcoded-menu-caption">
             <label>Pengajuan</label>
         </li>
-        <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item {{ Request::segment(1) . '/'. Request::segment(2) == 'rt/pelayanan' || Request::path() == 'rt' ? 'active' : '' }}">
-            <a href="{{ ('/rt/pelayanan') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pengajuan Pelayanan</span></a>
-        </li>
         <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item  {{ Request::segment(1) . '/'. Request::segment(2) == 'rt/master_warga' ? 'active' : '' }}">
             <a href="{{ route('rt/master_warga') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Master Data Warga</span></a>
+        </li>
+        <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item {{ Request::segment(1) . '/'. Request::segment(2) == 'rt/pelayanan' || Request::path() == 'rt' ? 'active' : '' }}">
+            <a href="{{ ('/rt/pelayanan') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pengajuan Pelayanan</span></a>
         </li>
     @endif
 </ul>

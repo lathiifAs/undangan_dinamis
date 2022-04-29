@@ -162,6 +162,32 @@
                                             <input type="text" required class="form-control" name="kewarganegaraan" id="kewarganegaraan"
                                                 placeholder="Kewarganegaraan">
                                         </div>
+                                        <div class="col-lg-6" id="div_st_kawin">
+                                            <label for="">Status Vaksin</label>
+                                            <select class="mb-3 form-control" required id="vaksin_level" name="vaksin_level">
+                                                <option value="belum">Belum Vaksin</option>
+                                                <option value="1">Vaksin 1</option>
+                                                <option value="2">Vaksin 2</option>
+                                                <option value="3">Vaksin 3</option>
+                                                <option value="4">Vaksin 4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row col-lg-12 mt-2">
+                                        <div class="col-lg-6" id="div_kewarganegaraan">
+                                            <label for="">PDAM</label>
+                                            <select class="mb-3 form-control" required id="pdam" name="pdam">
+                                                <option value="belum_punya">Belum Memiliki</option>
+                                                <option value="pribadi">Milik Pribadi</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6" id="div_st_kawin">
+                                            <label for="">Listrik</label>
+                                            <select class="mb-3 form-control" required id="listrik" name="listrik">
+                                                <option value="belum_punya">Belum Memiliki</option>
+                                                <option value="pribadi">Milik Pribadi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="row col-lg-12 mt-2">
                                         <div class="col-lg-12" id="div_alamat">

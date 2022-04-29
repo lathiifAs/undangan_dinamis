@@ -21,5 +21,8 @@ class Data_wargas extends Model
         'st_kawin',
         'kewarganegaraan',
         'alamat',
+        'vaksin_level',
+        'listrik',
+        'pdam',
     ];
 }

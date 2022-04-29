@@ -48,16 +48,16 @@ class PelayananController extends Controller
 
         // dd($request->jns_pengajuan);
 
-        $search = '';
+        $search = [];
         if ( $request->rt_id != '' || $request->no_kk != '' || $request->nik != '' || $request->nama != '' || $request->jns_pengajuan != '') {
             if ($request->btn_submit == 'search') {
                 // init
-                $request->rt_id != '' ? $request->rt_id =  $request->rt_id  : $request->rt_id = '%';
+                $request->rt_id != '' ? $request->rt_id =  $request->rt_id   : $request->rt_id = '%';
                 $request->no_kk != '' ? $request->no_kk =  $request->no_kk  : $request->no_kk = '%';
                 $request->nik != '' ? $request->nik =  $request->nik  : $request->nik = '%';
                 $request->nama != '' ? $request->nama = '%'. $request->nama .'%'  : $request->nama = '%';
                 $request->jns_pengajuan != '' ? $request->jns_pengajuan =  $request->jns_pengajuan  : $request->jns_pengajuan = '%';
-                $search = $request;
+                // $search = $request;
             }elseif($request->btn_submit == 'reset'){
                 $request->jns_pengajuan = '%';
                 $request->rt_id = '%';
