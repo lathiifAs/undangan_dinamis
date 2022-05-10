@@ -100,6 +100,7 @@ Route::middleware('admin')->group(function () {
     Route::post('/admin/pelayanan',  [PelayananController::class, 'index'])->name('admin/pelayanan');
     Route::get('/admin/master_warga',  [MasterWargaController::class, 'index'])->name('admin/master_warga');
     Route::post('/admin/master_warga',  [MasterWargaController::class, 'index'])->name('admin/master_warga');
+    Route::post('/admin/master_warga/import',  [MasterWargaController::class, 'importData'])->name('admin/master_warga/import');
 
     // Route::get('/user/profile', function () {
     //     // Uses first & second middleware...
@@ -120,6 +121,8 @@ Route::middleware('rt')->group(function () {
     Route::get('/rt/master_warga_rt',  [RtMasterWargaController::class, 'getWargaRt'])->name('rt/master_warga_rt');
     Route::get('/rt/master_warga/add',  [RtMasterWargaController::class, 'add'])->name('rt/master_warga/add');
     Route::post('/rt/master_warga/add',  [RtMasterWargaController::class, 'add_process'])->name('rt/master_warga/add');
+    Route::post('/rt/master_warga/import',  [RtMasterWargaController::class, 'importData'])->name('rt/master_warga/import');
+
 
 
 });

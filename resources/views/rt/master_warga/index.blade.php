@@ -38,7 +38,10 @@
                                     <div class="col-lg-8 mt-3">
                                         <h5>{{ $main_title }}</h5>
                                     </div>
+
                                     <div class="col-lg-4 text-right">
+                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#importModal" class="btn btn-outline-info"><i class="fa fa-upload" aria-hidden="true"></i>Import Data Warga</a>
+
                                         <a href="{{ route('rt/master_warga/add') }}" class="btn btn-primary btn-lg">
                                             <span class="fa fa-plus" aria-hidden="true"></span> Tambah
                                         </a>
@@ -48,6 +51,26 @@
                             <div class="card-block">
                                 <p>Daftar Warga
                                 </p>
+
+
+                                @if ($errors->any())
+                                <div class="alert alert-danger m-3" role="alert">
+                                    <h4>Error</h4>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </div>
+                                @endif
+
+
+                                @if ($message = Session::get('success'))
+                                    <div class="alert alert-success m-3" role="alert">
+                                        <h4>Success</h4>
+                                        {{ $message }}
+                                    </div>
+                                @endif
+
+
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-6">
                                         <input type="text" class="form-control" placeholder="No. KK">
@@ -124,6 +147,43 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Import Data Warga</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <form action="{{route("rt/master_warga/import")}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <fieldset>
+                    <label>Pilih file yang akan di upload  <small class="warning text-muted">{{__('Hanya berlaku format Excel (.xlsx or .xls)')}}</small></label>
+                    <div class="input-group">
+                        <input type="file" required class="form-control" name="uploaded_file" id="uploaded_file">
+                        @if ($errors->has('uploaded_file'))
+                            <p class="text-right mb-0">
+                                <small class="danger text-muted" id="file-error">{{ $errors->first('uploaded_file') }}</small>
+                            </p>
+                        @endif
+                        <div class="input-group-append" id="button-addon2">
+                            <button class="btn btn-primary square" type="submit"><i class="ft-upload mr-1"></i> Upload</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 @push('custom-scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

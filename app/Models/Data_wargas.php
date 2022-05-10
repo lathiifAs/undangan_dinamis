@@ -24,5 +24,7 @@ class Data_wargas extends Model
         'vaksin_level',
         'listrik',
         'pdam',
+        'gang',
+        'pekerjaan'
     ];
 }
