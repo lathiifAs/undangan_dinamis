@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Data_pengajuans;
 use App\Models\Data_wargas;
 use App\Models\User;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class PelayananController extends Controller
 {
@@ -27,17 +29,23 @@ class PelayananController extends Controller
      */
 
     public function dashboard()
-    // {   $main_title = 'Grafik Pelayanan dan Penilaian';
         {
             $main_title = 'Grafik aktifitas pelayanan RT RW';
 
+            // $data = Data_pengajuans::whereDate('created_at', Carbon::today())->groupBy('rt_id')->count();
+            $data = DB::table('data_pengajuans')
+                ->join('users', 'users.id', '=', 'data_pengajuans.rt_id')
+                 ->select(DB::raw('count(*) as total'))
+                 ->groupBy('data_pengajuans.rt_id')
+                 ->orderBy('rt_id')
+                 ->whereDate('data_pengajuans.created_at', Carbon::today())
+                 ->get();
+            // $data = Data_pengajuans::latest()->get();
+            $rt = User::where('role', 'rt')->get();
 
-        $data = Data_pengajuans::leftJoin('data_wargas', 'data_wargas.nik', '=', 'data_pengajuans.nik')
-        ->leftJoin('users', 'users.id', '=', 'data_pengajuans.rt_id')
-        ->orderBy('data_pengajuans.created_at', 'desc')
-        ->get(['data_pengajuans.*', 'data_wargas.nama', 'data_wargas.alamat', 'users.name as nama_rt']);
-        // $data = Data_pengajuans::latest()->get();
-        $rt = User::where('role', 'rt')->get();
+            // $jml = $data->count();
+
+            dd($data);
 
         return view('admin.pelayanan.dashboard', compact('main_title', 'data', 'rt'));
     }

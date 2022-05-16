@@ -38,55 +38,18 @@
                                     <div class="col-lg-8 mt-3">
                                         <h5>{{ $main_title }}</h5>
                                     </div>
-                                    <div class="col-lg-4 text-right">
-                                        <a href="{{ route('rt/pelayanan/add') }}" class="btn btn-primary btn-lg">
-                                            <span class="fa fa-plus" aria-hidden="true"></span> Tambah Pengajuan
-                                        </a>
-                                    </div>
                                 </div>
+                            </div>
+
+                            <div class="text-center mt-2">
+                                <a href="{{ route('rt/pelayanan/add') }}" class="btn btn-primary btn-lg">
+                                    <span class="fa fa-plus" aria-hidden="true"></span> Tambah Pengajuan
+                                </a>
                             </div>
                             <div class="card-block">
                                 <p>Daftar Pengajuan Pelayanan
                                 </p>
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-6">
-                                        <input type="text" class="form-control" placeholder="No. KK">
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <input type="text" class="form-control" placeholder="NIK">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <input type="text" class="form-control" placeholder="Nama">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <select class="form-control js-example-basic-single " name="state">
-                                            <option value="">Pilih Keperluan</option>
-                                            <option value="WY">Pembuatan SKU</option>
-                                            <option value="AL">Pembuatan KTP</option>
-                                            <option value="WY">Perubahan KTP</option>
-                                            <option value="WY">Pembuatan Ket. Domisili</option>
-                                            <option value="WY">Pindah Domisili</option>
-                                            <option value="WY">Pembuatan Surat Nikah</option>
-                                            <option value="WY">Pembuatan Surat Kematian</option>
-                                            <option value="WY">Pembuatan KK</option>
-                                            <option value="WY">Perubahan KK</option>
-                                            <option value="WY">Pembuatan Akte</option>
-                                            <option value="WY">Pembuatan SKTM</option>
-                                            <option value="WY">Dll</option>
-                                          </select>
-                                    </div>
-                                    <div class="col-lg-2 row d-none d-lg-block">
-                                        <button class="btn btn-icon btn-info"><i class="fa fa-search"></i></button>
-                                        <button class="btn btn-icon btn-outline-secondary"><i class="fa fa-times"></i></button>
-                                    </div>
 
-                                    <div class="col-lg-2 row d-lg-none">
-                                        <div class="row ml-3 mt-4">
-                                                <button class="btn btn-icon btn-info"><i class="fa fa-search"></i></button>
-                                                <button class="btn btn-icon btn-outline-secondary"><i class="fa fa-times"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="table-responsive mt-3" style="overflow: scroll;">
                                     <table class="table table-hover">
                                         <thead>

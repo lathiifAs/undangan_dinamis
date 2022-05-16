@@ -86,30 +86,19 @@
      //    chart
      const ctx_1 = $('#pengajuan_hari');
             const pengajuanHari = new Chart(ctx_1, {
-                type: 'bar',
+                type: 'pie',
                 data: {
-                    labels: ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'],
+                    labels: ['RT. 1', 'RT. 2'],
                     datasets: [
                         {
-                            label: 'RT. 01',
-                            data: [2, 3, 5, 3.5],
-                            fill: false,
-                            borderColor: 'rgb(210, 0, 0)',
-                            backgroundColor:  'rgb(255,0,0, 0.7)',
-                            tension: 0.1
-                        },
-                        {
-                            label: 'RT. 02',
-                            data: [1, 4, 6, 10],
-                            fill: false,
-                            borderColor: 'rgb(111, 219, 254)',
-                            backgroundColor: 'rgb(111, 219, 225, 0.7)',
-                            tension: 0.1
+                            data: [2, 5],
+                            label: 'Dataset 1',
+                            borderColor: ['rgb(210, 0, 0)', 'rgb(111, 219, 254)'],
+                            backgroundColor:  ['rgb(255,0,0, 0.7)',  'rgb(111, 219, 225, 0.7)'],
                         },
                     ]
                 },
                 options: {
-                    responsive: true,
                     plugins: {
                         legend: {
                             position: 'top',

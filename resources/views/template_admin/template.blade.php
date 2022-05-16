@@ -82,7 +82,7 @@
                         <li><a class="dropdown-item" href="javascript:">Something else here</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <div class="main-search">
                         <div class="input-group">
                             <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
@@ -94,10 +94,10 @@
                             </span>
                         </div>
                     </div>
-                </li>
+                </li> --}}
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li>
+                {{-- <li>
                     <div class="dropdown">
                         <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown"><i class="icon feather icon-bell"></i></a>
                         <div class="dropdown-menu dropdown-menu-right notification">
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> --}}
                 <li>
                     <div class="dropdown drp-user">
                         <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
@@ -157,7 +157,7 @@
                         <div class="dropdown-menu dropdown-menu-right profile-notification">
                             <div class="pro-head">
                                 <img src="{{ URL('admin_template/assets/images/user/avatar-1.jpg')}}" class="img-radius" alt="User-Profile-Image">
-                                <span>John Doe</span>
+                                <span>Nama User Login</span>
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf
                                     <a  href="javascript:;" onclick="parentNode.submit();" class="dud-logout" title="Logout">
@@ -166,10 +166,15 @@
                                 </form>
                             </div>
                             <ul class="pro-body">
-                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
-                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-                                <li><a href="message.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+                                <li>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <a href="javascript:" onclick="parentNode.submit();" class="dropdown-item"><i class="feather icon-log-out"></i> Logout</a>
+                                    {{-- <a  href="javascript:;" onclick="parentNode.submit();" class="dud-logout" title="Logout">
+                                        <i class="feather icon-log-out"></i>
+                                    </a> --}}
+                                    </form>
+                                </li>
                             </ul>
                         </div>
                     </div>

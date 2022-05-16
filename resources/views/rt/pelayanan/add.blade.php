@@ -39,13 +39,13 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="row">
-                                        <div class="col-lg-8 mt-3">
+                                        <div class="col-9 mt-2">
                                             <h5>Tambah Pengajuan</h5>
                                         </div>
-                                        <div class="col-lg-4 text-right">
+                                        <div class="col-3 text-right">
                                             <a href="{{ route('rt/pelayanan') }}"
                                                 class="btn btn-outline-secondary btn-lg">
-                                                <span class="fa fa-arrow-left" aria-hidden="true"></span> Kembali
+                                                <span class="fa fa-arrow-left" aria-hidden="true"></span>
                                             </a>
                                         </div>
                                     </div>
