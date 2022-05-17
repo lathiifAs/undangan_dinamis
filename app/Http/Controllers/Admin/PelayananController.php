@@ -31,21 +31,10 @@ class PelayananController extends Controller
     public function dashboard()
         {
             $main_title = 'Grafik aktifitas pelayanan RT RW';
-
-            // $data = Data_pengajuans::whereDate('created_at', Carbon::today())->groupBy('rt_id')->count();
-            $data = DB::table('data_pengajuans')
-                ->join('users', 'users.id', '=', 'data_pengajuans.rt_id')
-                 ->select(DB::raw('count(*) as total'))
-                 ->groupBy('data_pengajuans.rt_id')
-                 ->orderBy('rt_id')
-                 ->whereDate('data_pengajuans.created_at', Carbon::today())
-                 ->get();
-            // $data = Data_pengajuans::latest()->get();
+            $data = DB::select('SELECT b.name, COUNT(*) AS total FROM data_pengajuans a INNER JOIN users b ON a.rt_id = b.id WHERE DATE(a.created_at) = CURDATE() GROUP BY a.rt_id');
             $rt = User::where('role', 'rt')->get();
 
-            // $jml = $data->count();
-
-            dd($data);
+            // dd($data);
 
         return view('admin.pelayanan.dashboard', compact('main_title', 'data', 'rt'));
     }
@@ -81,12 +70,14 @@ class PelayananController extends Controller
             ->where('data_wargas.nik', 'like', $request->nik)
             ->where('data_wargas.nama', 'like', $request->nama)
             ->where('data_pengajuans.jns_pengajuan', 'like', $request->jns_pengajuan)
+            ->whereDate('data_pengajuans.created_at', Carbon::today())
             ->orderBy('data_pengajuans.created_at', 'desc')
             ->get(['data_pengajuans.*', 'data_wargas.nama', 'data_wargas.alamat', 'users.name as nama_rt']);
 
         }else{
             $data = Data_pengajuans::leftJoin('data_wargas', 'data_wargas.nik', '=', 'data_pengajuans.nik')
             ->leftJoin('users', 'users.id', '=', 'data_pengajuans.rt_id')
+            ->whereDate('data_pengajuans.created_at', Carbon::today())
             ->orderBy('data_pengajuans.created_at', 'desc')
             ->get(['data_pengajuans.*', 'data_wargas.nama', 'data_wargas.alamat', 'users.name as nama_rt']);
         }

@@ -83,15 +83,24 @@
 
     });
 
+    var data_chart =  {!! json_encode($data) !!};
+    var list_rt = [];
+    var total_pengajuan = [];
+    data_chart.forEach(function(list, index) {
+        // console.log();
+        list_rt.push(list.name)
+        total_pengajuan.push(list.total)
+    });
+    console.log(list_rt);
      //    chart
      const ctx_1 = $('#pengajuan_hari');
             const pengajuanHari = new Chart(ctx_1, {
                 type: 'pie',
                 data: {
-                    labels: ['RT. 1', 'RT. 2'],
+                    labels: list_rt,
                     datasets: [
                         {
-                            data: [2, 5],
+                            data: total_pengajuan,
                             label: 'Dataset 1',
                             borderColor: ['rgb(210, 0, 0)', 'rgb(111, 219, 254)'],
                             backgroundColor:  ['rgb(255,0,0, 0.7)',  'rgb(111, 219, 225, 0.7)'],

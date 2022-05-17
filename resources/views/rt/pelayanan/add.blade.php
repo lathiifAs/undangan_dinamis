@@ -38,17 +38,8 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="row">
-                                        <div class="col-9 mt-2">
-                                            <h5>Tambah Pengajuan</h5>
-                                        </div>
-                                        <div class="col-3 text-right">
-                                            <a href="{{ route('rt/pelayanan') }}"
-                                                class="btn btn-outline-secondary btn-lg">
-                                                <span class="fa fa-arrow-left" aria-hidden="true"></span>
-                                            </a>
-                                        </div>
-                                    </div>
+
+
                                 </div>
                                 <div class="card-block">
 
@@ -260,6 +251,7 @@
                         // pembuatan ktp
                         if (data.id == 'buat_ktp') {
                             $('#show').hide();
+                            $('#btn_submit').show();
 
                             $('#div_sku').hide();
                             $('#div_ket').show();
