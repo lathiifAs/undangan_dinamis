@@ -91,6 +91,12 @@
         // console.log();
         list_rt.push(list.rt)
         total_pengajuan.push(list.total)
+
+        // if (list.total == 0) {
+        //     total_pengajuan.push(0.1)
+        // }else{
+        //     total_pengajuan.push(list.total)
+        // }
     });
     console.log(list_rt);
      //    chart
@@ -102,7 +108,7 @@
                     datasets: [
                         {
                             data: total_pengajuan,
-                            label: 'Dataset 1',
+                            label: 'Jumlah',
                             borderColor: ['rgb(210, 0, 0)', 'rgb(111, 219, 254)'],
                             backgroundColor:  ['rgb(255,0,0, 0.7)',  'rgb(111, 219, 225, 0.7)'],
                         },

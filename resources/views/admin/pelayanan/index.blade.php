@@ -153,7 +153,7 @@
 
                                                 <td style="text-align: center">
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target="#ratingModal" class="btn btn-icon btn-outline-warning"><i class="fa fa-star-half" aria-hidden="true"></i></a>
-                                                    <a href="" class="btn btn-icon btn-outline-primary"><i class="fa fa-file"></i></a>
+                                                    {{-- <a href="" class="btn btn-icon btn-outline-primary"><i class="fa fa-file"></i></a> --}}
                                                     <button class="btn btn-icon btn-info"><i class="fa fa-eye"></i></button>
                                                     <button class="btn btn-icon btn-warning"><i class="fa fa-edit"></i></button>
                                                     <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="" method="POST">
@@ -201,7 +201,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-          <button type="button" class="btn btn-success">Kirim</button>
+          <button type="button" class="btn btn-primary">Kirim dan Print</button>
         </div>
       </div>
     </div>
