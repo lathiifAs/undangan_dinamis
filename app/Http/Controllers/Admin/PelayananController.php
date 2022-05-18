@@ -31,8 +31,16 @@ class PelayananController extends Controller
     public function dashboard()
         {
             $main_title = 'Grafik aktifitas pelayanan RT RW';
-            $data = DB::select('SELECT b.name, COUNT(*) AS total FROM data_pengajuans a INNER JOIN users b ON a.rt_id = b.id WHERE DATE(a.created_at) = CURDATE() GROUP BY a.rt_id');
-            $rt = User::where('role', 'rt')->get();
+            $rt = User::where('role', 'rt')->orderBy('id', 'ASC')->get();
+            $data = [];
+            // $data = DB::select('SELECT a.name, COUNT(*) AS total FROM users a LEFT JOIN data_pengajuans b ON a.rt_id = b.id WHERE DATE(b.created_at) = CURDATE() GROUP BY b.rt_id');
+            foreach ($rt as $key => $value) {
+                // $chart = DB::select('SELECT COUNT(*) AS total FROM data_pengajuans WHERE DATE(created_at) = CURDATE() AND rt_id = '. $value['id'] .'');
+                $chart = Data_pengajuans::whereDate('created_at', date('Y-m-d'))
+                ->where('rt_id', '=', $value['id'])->count();
+                // ('SELECT COUNT(*) AS total FROM data_pengajuans WHERE DATE(created_at) = CURDATE() AND rt_id = '. $value['id'] .'')->count();
+                $data[$key] = ['rt' => $value['name'], 'total' => $chart];
+            }
 
             // dd($data);
 

@@ -108,14 +108,14 @@
                                                 </td>
 
                                                 <td style="text-align: center">
-                                                    <a href="" class="btn btn-icon btn-outline-primary"><i class="fa fa-file"></i></a>
+                                                    {{-- <a href="" class="btn btn-icon btn-outline-primary"><i class="fa fa-file"></i></a> --}}
                                                     <button class="btn btn-icon btn-info"><i class="fa fa-eye"></i></button>
                                                     <button class="btn btn-icon btn-warning"><i class="fa fa-edit"></i></button>
-                                                    <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="" method="POST">
+                                                    {{-- <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="" method="POST">
                                                         {{ csrf_field() }}
                                                         <input type="hidden" name="id" value="{{ $dt->id }}">
                                                     <button type="submit" class ="btn btn-icon btn-danger"><i class="fa fa-trash"></i></button>
-                                                    </form>
+                                                    </form> --}}
                                                 </td>
                                             </tr>
                                             @empty

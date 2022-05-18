@@ -84,11 +84,12 @@
     });
 
     var data_chart =  {!! json_encode($data) !!};
+    console.log(data_chart);
     var list_rt = [];
     var total_pengajuan = [];
     data_chart.forEach(function(list, index) {
         // console.log();
-        list_rt.push(list.name)
+        list_rt.push(list.rt)
         total_pengajuan.push(list.total)
     });
     console.log(list_rt);
