@@ -39,7 +39,7 @@ class PelayananController extends Controller
                 $chart = Data_pengajuans::whereDate('created_at', date('Y-m-d'))
                 ->where('rt_id', '=', $value['id'])->count();
                 // ('SELECT COUNT(*) AS total FROM data_pengajuans WHERE DATE(created_at) = CURDATE() AND rt_id = '. $value['id'] .'')->count();
-                $data[$key] = ['rt' => $value['name'], 'total' => $chart];
+                $data[$key] = ['rt' => $value['name'], 'total' => $chart == '' ? 0: $chart];
             }
 
             // dd($data);
