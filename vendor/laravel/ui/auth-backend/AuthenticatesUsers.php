@@ -48,6 +48,13 @@ trait AuthenticatesUsers
                 $request->session()->put('auth.password_confirmed_at', time());
             }
 
+            // cek akadaluarsa akun
+            if (date('Y-m-d') > Auth::user()->tgl_expired) {
+                throw ValidationException::withMessages([
+                    'username' => trans('auth.expired'),
+                ]);
+            }
+
             return $this->sendLoginResponse($request);
         }
 

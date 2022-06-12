@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\MasterWargaController;
 use App\Http\Controllers\Admin\PelayananController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Rt\RtMasterWargaController;
 use App\Http\Controllers\Rt\RtPelayananController;
 
@@ -20,77 +21,20 @@ use App\Http\Controllers\Rt\RtPelayananController;
 */
 
 Route::get('/', function () {
+    // return view('demo');
     return view('welcome');
+    // return view('manage.landingpage');
 });
 
-Route::get('/visi_misi', function () {
-    return view('visi_misi');
+Route::get('/demo', function () {
+    return view('demo');
+    // return view('welcome');
+    // return view('manage.landingpage');
+})->name('/demo');
+// admin
+Route::middleware('customer')->group(function () {
+    Route::get('/customer',  [CustomerController::class, 'index'])->name('customer');
 });
-
-Route::get('/perangkat_desa', function () {
-    return view('perangkat_desa');
-});
-
-Route::get('/anggaran_dana', function () {
-    return view('anggaran_dana');
-});
-
-Route::get('/demografis', function () {
-    return view('demografis');
-});
-
-
-Route::get('/fasilitas_umum', function () {
-    return view('fasilitas_umum');
-});
-
-
-Route::get('/potensi_desa', function () {
-    return view('potensi_desa');
-});
-
-
-
-Route::get('/berita', function () {
-    return view('berita');
-});
-
-
-Route::get('/layanan_pengaduan', function () {
-    return view('layanan_pengaduan');
-});
-
-
-
-
-Route::get('/paud', function () {
-    return view('paud');
-});
-
-Route::get('/tk', function () {
-    return view('tk');
-});
-
-Route::get('/sd_mi', function () {
-    return view('sd_mi');
-});
-
-Route::get('/smp_mts', function () {
-    return view('smp_mts');
-});
-
-Route::get('/sma_smk_ma', function () {
-    return view('sma_smk_ma');
-});
-
-Route::get('/foto_desa', function () {
-    return view('foto_desa');
-});
-
-Route::get('/foto_kegiatan', function () {
-    return view('foto_kegiatan');
-});
-
 
 // admin
 Route::middleware('admin')->group(function () {
@@ -108,28 +52,28 @@ Route::middleware('admin')->group(function () {
 });
 
 
-// rt
-Route::middleware('rt')->group(function () {
-    Route::get('/rt',  [RtPelayananController::class, 'index'])->name('rt');
-    Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
-    Route::get('/rt/pelayanan/add',  [RtPelayananController::class, 'add'])->name('rt/pelayanan/add');
-    Route::post('/rt/pelayanan/add',  [RtPelayananController::class, 'add_process'])->name('rt/pelayanan/add');
-    // Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
-    // Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
+// // rt
+// Route::middleware('rt')->group(function () {
+//     Route::get('/rt',  [RtPelayananController::class, 'index'])->name('rt');
+//     Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
+//     Route::get('/rt/pelayanan/add',  [RtPelayananController::class, 'add'])->name('rt/pelayanan/add');
+//     Route::post('/rt/pelayanan/add',  [RtPelayananController::class, 'add_process'])->name('rt/pelayanan/add');
+//     // Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
+//     // Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
 
-    Route::get('/rt/master_warga',  [RtMasterWargaController::class, 'index'])->name('rt/master_warga');
-    Route::get('/rt/master_warga_rt',  [RtMasterWargaController::class, 'getWargaRt'])->name('rt/master_warga_rt');
-    Route::get('/rt/master_warga/add',  [RtMasterWargaController::class, 'add'])->name('rt/master_warga/add');
-    Route::post('/rt/master_warga/add',  [RtMasterWargaController::class, 'add_process'])->name('rt/master_warga/add');
-    Route::post('/rt/master_warga/import',  [RtMasterWargaController::class, 'importData'])->name('rt/master_warga/import');
+//     Route::get('/rt/master_warga',  [RtMasterWargaController::class, 'index'])->name('rt/master_warga');
+//     Route::get('/rt/master_warga_rt',  [RtMasterWargaController::class, 'getWargaRt'])->name('rt/master_warga_rt');
+//     Route::get('/rt/master_warga/add',  [RtMasterWargaController::class, 'add'])->name('rt/master_warga/add');
+//     Route::post('/rt/master_warga/add',  [RtMasterWargaController::class, 'add_process'])->name('rt/master_warga/add');
+//     Route::post('/rt/master_warga/import',  [RtMasterWargaController::class, 'importData'])->name('rt/master_warga/import');
 
 
 
-});
+// });
 
 
 
 Auth::routes();
 // Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

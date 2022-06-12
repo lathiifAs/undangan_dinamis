@@ -22,16 +22,8 @@ class Admin
             return redirect()->route('login');
         }
 
-        if (Auth::user()->role == 'rt') {
-            return redirect()->route('rt');
-        }
-
-        if (Auth::user()->role == 'bumdes') {
-            return redirect()->route('bumdes');
-        }
-
-        if (Auth::user()->role == 'bpd') {
-            return redirect()->route('bpd');
+        if (Auth::user()->role == 'customer') {
+            return redirect()->route('customer');
         }
 
         if (Auth::user()->role == 'admin') {

@@ -1,0 +1,61 @@
+.bradcam_bg{
+    background-image: url(../img/banner/bradcam.png);
+}
+.bradcam_bg_2{
+    background-image: url(../img/banner/bradcam2.png);
+}
+
+
+.bradcam_area{
+    padding: 198px 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 50px;
+    @media #{$mobile_device} {
+        padding: 100px 0;
+        margin: 0 0px;
+    }
+    @media #{$tablet_device}{
+        margin: 0 20px;
+    }
+    @media #{$mid_device}{
+        margin: 0 50px;
+    }
+    .bradcam_text{
+        h3{
+            font-size: 80px;
+            font-weight: 400;
+            color: #C78665;
+            @media #{$mobile_device} {
+                font-size: 40px;
+            }
+            @media #{$tablet_device} {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+// accommodation_area 
+.accommodation_area{
+    padding-top: 150px;
+    @media #{$mobile_device} {
+        padding-top: 50px;
+    }
+    @media #{$tablet_device} {
+        padding-top: 80px;
+    }
+    .accommondation_image{
+        margin: 4px !important;
+        img {
+            width: 100%;
+        }
+    }
+    h3{
+        margin-bottom: 14px;
+    }
+    p{
+        font-family: $font1;
+    }
+}

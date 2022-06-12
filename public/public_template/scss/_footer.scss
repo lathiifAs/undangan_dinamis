@@ -1,0 +1,45 @@
+.footer{
+    background: #FFFAF2;
+    .footer_top{
+        text-align: center;
+        padding:73px 0;
+        ul{
+            li{
+                display: inline-block;
+                a{
+                    font-size: 15px;
+                    font-family: $font1;
+                    margin: 0 27px; 
+                    color: #1F1F1F;
+                    @media #{$mobile_device} {
+                        margin: 0 5px; 
+                    }
+                    &:hover{
+                        color: #C78665;
+                    }
+                }
+            }
+        }
+    }
+    .copy-right_text{
+        padding-bottom: 30px;
+        background: #fff;
+        .footer_border{
+            padding-bottom: 30px;
+        }
+        .copy_right{
+            font-size: 14px;
+            color:#919191;
+            margin-bottom: 0;
+            font-weight: 400;
+            font-family: $font1;
+            
+            @media #{$mobile_device} {
+                font-size: 14px;
+            }
+            a{
+                color: #C78665;
+            }
+        }
+    }
+}

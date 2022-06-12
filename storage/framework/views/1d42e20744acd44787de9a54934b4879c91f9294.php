@@ -274,6 +274,7 @@
         <script src="<?php echo e(URL('/public_template/assets/js/plugins.js')); ?>"></script>
         <script src="<?php echo e(URL('/public_template/assets/js/main.js')); ?>"></script>
 
+
         <?php echo $__env->yieldPushContent('custom-scripts'); ?>
 
 

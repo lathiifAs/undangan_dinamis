@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="trending-main">
                     <!-- Trending Tittle -->
-                    <div class="row">
+                    <div class="row" style="margin-top: -20px">
                         <div class="col-lg-12">
                             <div class="trending-tittle">
                                 <strong>Trending Saat Ini</strong>
@@ -28,7 +28,7 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="<?php echo e(URL('public_template/assets/img/banner/kantor_1.jpeg')); ?>"
-                                            height="500px" class="d-block w-100" alt="">
+                                            height="380px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
                                             <h5 class="text-white">Kantor Desa Karangsong</h5>
                                             <p class="text-white text-mute"></p>
@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <img src="<?php echo e(URL('public_template/assets/img/banner/kantor_2.jpeg')); ?>"
-                                            height="500px" class="d-block w-100" alt="">
+                                            height="380px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
                                             <h5 class="text-white">Kantor Desa Karangsong</h5>
                                             <p class="text-white text-mute"></p>
@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <img src="<?php echo e(URL('public_template/assets/img/banner/hutan_mangrove.jpg')); ?>"
-                                            height="500px" class="d-block w-100" alt="">
+                                            height="380px" class="d-block w-100" alt="">
                                         <div class="carousel-caption d-none d-md-block mt-5">
                                             <h5 class="text-white">Hutam Mangrove</h5>
                                             <p class="text-white text-mute">Eko Wisata Karangsong yang Rindang.</p>
@@ -70,52 +70,52 @@
                         </div>
                         <!-- Riht content -->
                         <!-- <div class="col-lg-4">
-                                <div class="trand-right-single d-flex">
-                                    <div class="trand-right-img">
-                                        <img src="<?php echo e(URL('public_template/assets/img/trending/right1.jpg')); ?>" alt="">
-                                    </div>
-                                    <div class="trand-right-cap">
-                                        <span class="color1">Concert</span>
-                                        <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="trand-right-single d-flex">
-                                    <div class="trand-right-img">
-                                        <img src="<?php echo e(URL('public_template/assets/img/trending/right2.jpg')); ?>" alt="">
-                                    </div>
-                                    <div class="trand-right-cap">
-                                        <span class="color3">sea beach</span>
-                                        <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="trand-right-single d-flex">
-                                    <div class="trand-right-img">
-                                        <img src="<?php echo e(URL('public_template/assets/img/trending/right3.jpg')); ?>" alt="">
-                                    </div>
-                                    <div class="trand-right-cap">
-                                        <span class="color2">Bike Show</span>
-                                        <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="trand-right-single d-flex">
-                                    <div class="trand-right-img">
-                                        <img src="<?php echo e(URL('public_template/assets/img/trending/right4.jpg')); ?>" alt="">
-                                    </div>
-                                    <div class="trand-right-cap">
-                                        <span class="color4">See beach</span>
-                                        <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="trand-right-single d-flex">
-                                    <div class="trand-right-img">
-                                        <img src="<?php echo e(URL('public_template/assets/img/trending/right5.jpg')); ?>" alt="">
-                                    </div>
-                                    <div class="trand-right-cap">
-                                        <span class="color1">Skeping</span>
-                                        <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                            </div> -->
+                                            <div class="trand-right-single d-flex">
+                                                <div class="trand-right-img">
+                                                    <img src="<?php echo e(URL('public_template/assets/img/trending/right1.jpg')); ?>" alt="">
+                                                </div>
+                                                <div class="trand-right-cap">
+                                                    <span class="color1">Concert</span>
+                                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                                </div>
+                                            </div>
+                                            <div class="trand-right-single d-flex">
+                                                <div class="trand-right-img">
+                                                    <img src="<?php echo e(URL('public_template/assets/img/trending/right2.jpg')); ?>" alt="">
+                                                </div>
+                                                <div class="trand-right-cap">
+                                                    <span class="color3">sea beach</span>
+                                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                                </div>
+                                            </div>
+                                            <div class="trand-right-single d-flex">
+                                                <div class="trand-right-img">
+                                                    <img src="<?php echo e(URL('public_template/assets/img/trending/right3.jpg')); ?>" alt="">
+                                                </div>
+                                                <div class="trand-right-cap">
+                                                    <span class="color2">Bike Show</span>
+                                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                                </div>
+                                            </div>
+                                            <div class="trand-right-single d-flex">
+                                                <div class="trand-right-img">
+                                                    <img src="<?php echo e(URL('public_template/assets/img/trending/right4.jpg')); ?>" alt="">
+                                                </div>
+                                                <div class="trand-right-cap">
+                                                    <span class="color4">See beach</span>
+                                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                                </div>
+                                            </div>
+                                            <div class="trand-right-single d-flex">
+                                                <div class="trand-right-img">
+                                                    <img src="<?php echo e(URL('public_template/assets/img/trending/right5.jpg')); ?>" alt="">
+                                                </div>
+                                                <div class="trand-right-cap">
+                                                    <span class="color1">Skeping</span>
+                                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                                </div>
+                                            </div>
+                                        </div> -->
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
         <!-- Trending Area End -->
 
         <!-- Whats New Start -->
-        <section class="whats-news-area pt-50 pb-20">
+        <section class="whats-news-area pt-10 pb-20">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -409,8 +409,8 @@
                     </div>
                     <div class="row">
                         <div class="col-4">
-                            <img src="<?php echo e(URL('public_template/assets/img/struktur/desa.jpeg')); ?>" height="90%" class="w-100"
-                                alt="">
+                            <img src="<?php echo e(URL('public_template/assets/img/struktur/desa.jpeg')); ?>" height="90%"
+                                class="w-100" alt="">
                         </div>
                         <div class="col-8">
                             <img src="<?php echo e(URL('public_template/assets/img/struktur/bpd.jpg')); ?>" class="w-100"
@@ -426,20 +426,24 @@
         <!-- End Weekly-News -->
 
 
-        <!--   Weekly2-News start -->
         <div class="weekly2-news-area  weekly2-pading gray-bg">
             <div class="container">
                 <div class="weekly2-wrapper">
                     <!-- section Tittle -->
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="section-tittle mb-30">
                                 <h3>Letak Geografis Desa</h3>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="section-tittle mb-30">
+                                <h3>Laporan Posisi Darurat</h3>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-lg-6">
                             <div class="mapouter">
                                 <div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas"
                                         src="https://maps.google.com/maps?q=karangsong&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -466,10 +470,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="section-tittle mb-30">
+                                <div id="map_canvas" style="width:100%; height:400px"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- End Weekly-News -->
         
         <!-- End Start youtube -->
@@ -478,199 +488,214 @@
         
         <!-- End pagination  -->
     </main>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Detail Informasi Anggaran</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Detail Informasi Anggaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Detail Rincian Biaya Desa Karangsong
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            Detail Rincian Biaya Desa Karangsong
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <?php $__env->startPush('custom-scripts'); ?>
-
-  
-
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC87B6-SQkeq3eHIt6R6kbapYjZsEhJd6I&callback=initMap" async
-  defer>
-  </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
+    <!--Danger theme Modal -->
+    <div class="modal fade text-left" id="showModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel120"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h3 class="modal-title white nm_kapal" id="myModalLabel120"></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-lg-12 justify-content-center">
+                        <i class="bx bx-alarm text-danger text-center"  style="font-size: 5rem;"></i><h3 class="mt-2 ml-1 text-danger">SOS !</h3>
+                    </div>
+                    <div class="row col-lg-12 justify-content-center">
+                        <b><h5 class="no_hp text-center ml-2 mt-1"></h5></b>
+                    </div>
+                    <div class="col-lg-12 row mt-1">
+                        <div class="col-lg-6">
+                            Longitude : <b class="long"></b>
+                        </div>
+                        <div class="col-lg-6">
+                            Latitude : <b class="lat"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
+                        <i class="bx bx-x d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Tutup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script style="text/javascript">
-     // get notification and cart realtime in 5 second
 
-     function initMap(){
-        var mapMarkers = new Array();
-            var infowindow = new google.maps.InfoWindow();
-            var icon_st;
-            var seconds = 0;
+    <?php $__env->startPush('custom-scripts'); ?>
+        
 
-            var myLatlng = new google.maps.LatLng(-6.187590, 108.428183);
-            var mapOptions = {
-                zoom: 10,
-                center: myLatlng,
-            }
-            var map = new google.maps.Map(document.getElementById("mapdarurat"), mapOptions);
-            var s = 0;
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+                integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-            setInterval(function () {
+        
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC87B6-SQkeq3eHIt6R6kbapYjZsEhJd6I&callback=initialize">
+        </script>
+
+
+        <script style="text/javascript">
+            function initialize() {
+                var mapMarkers = new Array();
+                var infowindow = new google.maps.InfoWindow();
+                var icon_st;
+                var seconds = 0;
+
+                var myLatlng = new google.maps.LatLng(-6.304316, 108.361589);
+                var mapOptions = {
+                    zoom: 12,
+                    center: myLatlng,
+                }
+                var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+                var s = 0;
+                var kplLoc = [
+                    {long: -6.304316, lat:108.361589},
+                    {long: -6.310249, lat:108.351699}
+                ];
+
+                // membuat icon berkedip
+                setInterval(function () {
+
                 var marker = [];
                 var st_sos = [];
                 var icon_st_tmp;
-
                 resetMarker();
-                // init gambar
-                var icon_kapal = {
-                                    url: "https://images.vexels.com/media/users/3/166514/isolated/preview/e0d61d74c922e12f0dc129fc953d37f5-tug-ship-icon-by-vexels.png", // url
-                                    scaledSize: new google.maps.Size(40, 40), // scaled size
-                                    origin: new google.maps.Point(0, 0), // origin
-                                    anchor: new google.maps.Point(0, 0) // anchor
-                                };
 
-                                marker = new google.maps.Marker({
-                                    position: new google.maps.LatLng(-6.315176, 108.347497),
-                                    icon: icon_kapal
-                                });
+                    for (i = 0; i < kplLoc.length; i++) {
+                    // resetMarker();
+                    icon_st = "";
+                    // berkedip
+                    if (s % 2 == 0) {
+                        icon_st = "https://www.freeiconspng.com/thumbs/warning-icon-png/status-warning-icon-png-29.png";
+                    } else {
+                        icon_st = "";
+                    }
 
-                                // google.maps.event.addListener(marker, 'click', (function (marker, i) {
-                                //     return function () {
-                                //         tampilModal(kplLoc[i][0], kplLoc[i][4], st_sos[i], kplLoc[i][2], kplLoc[i][3])
-                                //     }
-                                // })(marker, i));
+                    // init gambar
+                    var icon_marker = {
+                        url: icon_st, // url
+                        scaledSize: new google.maps.Size(20, 20), // scaled size
+                        origin: new google.maps.Point(0, 0), // origin
+                        anchor: new google.maps.Point(0, 0) // anchor
+                    };
 
-                                mapMarkers.push(marker);
-                                marker.setMap(map);
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(kplLoc[i]['long'], kplLoc[i]['lat']),
+                        icon: icon_marker
+                    });
+
+
+                    // google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    //     return function () {
+                    //         tampilModal('Lathiif Aji Santhosho', '081904597978', 'SOS', 108.348113, -6.311418)
+                    //     }
+                    // })(marker, i));
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        tampilModal('Lathiif Aji Santhosho', '081904597978', 'SOS', 108.348113, -6.311418);
+                    });
+
+                    mapMarkers.push(marker);
+                    marker.setMap(map);
+                }
                 s++;
             }, 900);
+
             function resetMarker() {
-                if (mapMarkers.length > 0) {
-                    for (var i = 0; i < mapMarkers.length; i++) {
-                        if (mapMarkers[i] != null) {
-                            mapMarkers[i].setMap(null);
+                    if (mapMarkers.length > 0) {
+                        for (var i = 0; i < mapMarkers.length; i++) {
+                            if (mapMarkers[i] != null) {
+                                mapMarkers[i].setMap(null);
+                            }
                         }
                     }
+                    gmarkers = [];
                 }
-                gmarkers = [];
-            }
+
         }
-        // function initMap() {
-        //     var mapMarkers = new Array();
-        //     var infowindow = new google.maps.InfoWindow();
-        //     var icon_st;
-        //     var seconds = 0;
-
-        //     var myLatlng = new google.maps.LatLng(-6.187590, 108.428183);
-        //     var mapOptions = {
-        //         zoom: 10,
-        //         center: myLatlng,
-        //     }
-        //     var map = new google.maps.Map(document.getElementById("mapdarurat"), mapOptions);
-        //     var s = 0;
-
-        //     setInterval(function () {
-        //         var marker = [];
-        //         var st_sos = [];
-        //         var icon_st_tmp;
-
-        //         resetMarker();
-        //         // init gambar
-        //         var icon_kapal = {
-        //                             url: "https://images.vexels.com/media/users/3/166514/isolated/preview/e0d61d74c922e12f0dc129fc953d37f5-tug-ship-icon-by-vexels.png", // url
-        //                             scaledSize: new google.maps.Size(40, 40), // scaled size
-        //                             origin: new google.maps.Point(0, 0), // origin
-        //                             anchor: new google.maps.Point(0, 0) // anchor
-        //                         };
-
-        //                         marker = new google.maps.Marker({
-        //                             position: new google.maps.LatLng(-6.315176, 108.347497),
-        //                             icon: icon_kapal
-        //                         });
-
-        //                         // google.maps.event.addListener(marker, 'click', (function (marker, i) {
-        //                         //     return function () {
-        //                         //         tampilModal(kplLoc[i][0], kplLoc[i][4], st_sos[i], kplLoc[i][2], kplLoc[i][3])
-        //                         //     }
-        //                         // })(marker, i));
-
-        //                         mapMarkers.push(marker);
-        //                         marker.setMap(map);
-        //         s++;
-        //     }, 900);
-        //     function resetMarker() {
-        //         if (mapMarkers.length > 0) {
-        //             for (var i = 0; i < mapMarkers.length; i++) {
-        //                 if (mapMarkers[i] != null) {
-        //                     mapMarkers[i].setMap(null);
-        //                 }
-        //             }
-        //         }
-        //         gmarkers = [];
-        //     }
-
-        // }
 
 
-//    chart
-        const ctx = $('#myChart');
-        const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022'],
-            datasets: [{
-                label: 'DD',
-                data: [10, 20, 30, 40, 50, 60, 70],
-                fill: false,
-                borderColor: 'rgb(255,0,0)',
-                tension: 0.1
-            },
-            {
-                label: 'ADD',
-                data: [10, 30, 40, 20, 40, 40, 50],
-                fill: false,
-                borderColor: 'rgb(0,206,209)',
-                tension: 0.1
-            },
-            {
-                label: 'PADes',
-                data: [10, 20, 30, 30, 50, 50, 60],
-                fill: false,
-                borderColor: 'rgb(50,205,50)',
-                tension: 0.1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Chart APBDes Pertahun'
+
+            function tampilModal(nama, hp, sos, long, lat) {
+                $('.nm_kapal').html(nama);
+                $('.no_hp').html(hp);
+                $('.long').html(long);
+                $('.lat').html(lat);
+                $('#showModalDanger').modal('show');
             }
-            }
-        },
-    });
 
-   </script>
-
-  <?php $__env->stopPush(); ?>
-
+            //    chart
+            const ctx = $('#myChart');
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2017', '2018', '2019', '2020', '2021', '2022'],
+                    datasets: [{
+                            label: 'DD',
+                            data: [10, 20, 30, 40, 50, 60, 70],
+                            fill: false,
+                            borderColor: 'rgb(255,0,0)',
+                            tension: 0.1
+                        },
+                        {
+                            label: 'ADD',
+                            data: [10, 30, 40, 20, 40, 40, 50],
+                            fill: false,
+                            borderColor: 'rgb(0,206,209)',
+                            tension: 0.1
+                        },
+                        {
+                            label: 'PADes',
+                            data: [10, 20, 30, 30, 50, 50, 60],
+                            fill: false,
+                            borderColor: 'rgb(50,205,50)',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Chart APBDes Pertahun'
+                        }
+                    }
+                },
+            });
+        </script>
+    <?php $__env->stopPush(); ?>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('template_public.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Work\CV\Proyek\Laravel\website-desa\resources\views/welcome.blade.php ENDPATH**/ ?>

@@ -7,9 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-
     use AuthenticatesUsers;
-
     protected $redirectTo;
     public function redirectTo()
     {
@@ -19,23 +17,14 @@ class LoginController extends Controller
             $this->redirectTo = '/admin';
             return $this->redirectTo;
                 break;
-            case 'rt':
-                $this->redirectTo = '/rt';
-                return $this->redirectTo;
-                break;
-            case 'bumdes':
-                $this->redirectTo = '/bumdes';
-                return $this->redirectTo;
-                break;
-            case 'bpd':
-                $this->redirectTo = '/bpd';
+            case 'customer':
+                $this->redirectTo = '/customer';
                 return $this->redirectTo;
                 break;
             default:
                 $this->redirectTo = '/login';
                 return $this->redirectTo;
         }
-
         // return $next($request);
     }
 
