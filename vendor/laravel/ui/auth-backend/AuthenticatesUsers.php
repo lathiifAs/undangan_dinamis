@@ -49,7 +49,7 @@ trait AuthenticatesUsers
             }
 
             // cek akadaluarsa akun
-            if (date('Y-m-d') > Auth::user()->tgl_expired) {
+            if (date('Y-m-d') > Auth::user()->tgl_expired && Auth::user()->role == 'customer') {
                 throw ValidationException::withMessages([
                     'username' => trans('auth.expired'),
                 ]);

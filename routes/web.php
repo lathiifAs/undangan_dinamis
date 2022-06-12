@@ -5,8 +5,6 @@ use App\Http\Controllers\Admin\PelayananController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\Rt\RtMasterWargaController;
-use App\Http\Controllers\Rt\RtPelayananController;
 
 
 /*

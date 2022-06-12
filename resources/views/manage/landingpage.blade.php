@@ -1,4 +1,4 @@
-@extends('template_admin.template')
+@extends('template_customer.template')
 
 @section('konten')
     <!-- End Navbar -->

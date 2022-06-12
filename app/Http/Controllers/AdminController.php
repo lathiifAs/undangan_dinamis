@@ -23,6 +23,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('blank_admin');
+        return view('admin.index');
     }
 }
