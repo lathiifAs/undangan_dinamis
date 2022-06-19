@@ -37,13 +37,10 @@ Route::middleware('customer')->group(function () {
 // admin
 Route::middleware('admin')->group(function () {
     Route::get('/admin',  [AdminController::class, 'index'])->name('admin');
-    Route::get('/admin/pelayanan_grafik',  [PelayananController::class, 'dashboard'])->name('admin/pelayanan_grafik');
-    Route::get('/admin/pelayanan',  [PelayananController::class, 'index'])->name('admin/pelayanan');
-    Route::post('/admin/pelayanan',  [PelayananController::class, 'index'])->name('admin/pelayanan');
-    Route::get('/admin/master_warga',  [MasterWargaController::class, 'index'])->name('admin/master_warga');
-    Route::post('/admin/master_warga',  [MasterWargaController::class, 'index'])->name('admin/master_warga');
-    Route::post('/admin/master_warga/import',  [MasterWargaController::class, 'importData'])->name('admin/master_warga/import');
+    Route::get('/admin/register',  [AdminController::class, 'register'])->name('admin/register');
+    Route::get('/admin/inputData',  [AdminController::class, 'inputData'])->name('admin/inputData');
 
+    
     // Route::get('/user/profile', function () {
     //     // Uses first & second middleware...
     // });
