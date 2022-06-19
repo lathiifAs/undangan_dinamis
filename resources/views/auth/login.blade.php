@@ -92,7 +92,7 @@
               <div class="card card-plain mt-8">
                 <div class="card-header pb-0 text-left bg-transparent">
                   <h3 class="font-weight-bolder text-info text-gradient">Selamat Datang</h3>
-                  <p class="mb-0">Masukan Username dan Password yang diberikan oleh admin.</p>
+                  <p class="mb-0">Masukan no_hp dan Password yang diberikan oleh admin.</p>
                 </div>
 
 
@@ -112,10 +112,10 @@
                             </div>
                         @endif
 
-                    <label>Username</label>
+                    <label>no_hp</label>
                     <div class="mb-3">
-                      <input type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" placeholder="username" placeholder="Username" aria-label="username" aria-describedby="username-addon">
-                      @error('username')
+                      <input type="number" class="form-control @error('no_hp') is-invalid @enderror" name="no_hp" value="{{ old('no_hp') }}" placeholder="no_hp" placeholder="no_hp" aria-label="no_hp" aria-describedby="no_hp-addon">
+                      @error('no_hp')
                       <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
                       </span>

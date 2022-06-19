@@ -34,7 +34,7 @@ trait AuthenticatesUsers
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // the login attempts for this application. We'll key this by the username and
+        // the login attempts for this application. We'll key this by the no_hp and
         // the IP address of the client making these requests into this application.
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
             $this->hasTooManyLoginAttempts($request)) {
@@ -51,7 +51,7 @@ trait AuthenticatesUsers
             // cek akadaluarsa akun
             if (date('Y-m-d') > Auth::user()->tgl_expired && Auth::user()->role == 'customer') {
                 throw ValidationException::withMessages([
-                    'username' => trans('auth.expired'),
+                    'no_hp' => trans('auth.expired'),
                 ]);
             }
 
@@ -77,7 +77,7 @@ trait AuthenticatesUsers
     protected function validateLogin(Request $request)
     {
         $request->validate([
-            $this->username() => 'required|string',
+            $this->no_hp() => 'required|string',
             'password' => 'required|string',
         ]);
     }
@@ -103,7 +103,7 @@ trait AuthenticatesUsers
      */
     protected function credentials(Request $request)
     {
-        return $request->only($this->username(), 'password');
+        return $request->only($this->no_hp(), 'password');
     }
 
     /**
@@ -150,18 +150,18 @@ trait AuthenticatesUsers
     protected function sendFailedLoginResponse(Request $request)
     {
         throw ValidationException::withMessages([
-            $this->username() => [trans('auth.failed')],
+            $this->no_hp() => [trans('auth.failed')],
         ]);
     }
 
     /**
-     * Get the login username to be used by the controller.
+     * Get the login no_hp to be used by the controller.
      *
      * @return string
      */
-    public function username()
+    public function no_hp()
     {
-        return 'username';
+        return 'no_hp';
     }
 
     /**
