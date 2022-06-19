@@ -112,7 +112,7 @@
                             </div>
                         @endif
 
-                    <label>no_hp</label>
+                    <label>No. Hp</label>
                     <div class="mb-3">
                       <input type="number" class="form-control @error('no_hp') is-invalid @enderror" name="no_hp" value="{{ old('no_hp') }}" placeholder="no_hp" placeholder="no_hp" aria-label="no_hp" aria-describedby="no_hp-addon">
                       @error('no_hp')
