@@ -18,8 +18,14 @@
     <div class="card mt-4">
       <div class="card-header pb-0 p-3">
         <div class="row">
-          <div class="col-6 d-flex align-items-center">
+          <div class="col-10 d-flex align-items-center">
             <h6 class="mb-0">Daftar Pelanggan</h6>
+          </div>
+          <div class="col-2">
+            <a href="{{ ('admin/register') }}" class="btn btn-icon btn-3 btn-primary"   style="float: right;" type="button">
+                <span class="btn-inner--icon"><i  class="fa fa-plus mr-1"></i></span>
+              <span class="btn-inner--text">Tambah Data</span>
+            </a>
           </div>
         </div>
       </div>

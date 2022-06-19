@@ -9,7 +9,7 @@ class Withmessage {
 
     public function handle($request, Closure $next)
     {
-        $route = $request->route()->getName();
+        // $route = $request->route()->getName();
         if(date('Y-m-d') > Auth::user()->tgl_expired) {
             return redirect()->route('login')->with('error', 'Please auth!!');
         }
