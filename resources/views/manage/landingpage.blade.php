@@ -1,4 +1,4 @@
-@extends('template_customer.template')
+ @extends('template_customer.template')
 
 @section('konten')
     <!-- End Navbar -->
@@ -37,10 +37,11 @@
                         <div class="row text-center">
                             <div class="row">
                                 <div class="col">
-                                    <div
-                                        class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                    <a href="{{ URL('customer/coverFoto') }}">
+                                    <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
                                         <i class="fa fa-picture-o opacity-10"></i>
                                     </div>
+                                    </a>
                                     <br>
                                     <label for="">Gambar Cover</label>
                                 </div>

@@ -1,6 +1,7 @@
 @extends('template_admin.template')
 
 @section('konten')
+
 <div class="row">
     <div class="col-1">
         &nbsp;
@@ -22,25 +23,10 @@
             <h6 class="mb-0 fs-3">Register</h6>
           </div>
           
-          @if ($errors->any())
-          <div class="alert alert-danger m-3" role="alert">
-              <h4>Error</h4>
-              @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-              @endforeach
-          </div>
-      @endif
-
-
-      @if ($message = Session::get('success'))
-          <div class="alert alert-success m-3" role="alert">
-              <h4>Success</h4>
-              {{ $message }}
-          </div>
-      @endif
+         
 
           <div class="col-2">
-            <a href="{{ ('admin/register') }}" class="btn btn-icon btn-3 btn-outline-secondary" type="button" style="float: right;">
+            <a href="{{ ('/admin') }}" class="btn btn-icon btn-3 btn-outline-secondary" type="button" style="float: right;">
                 <span class="btn-inner--icon"><i class="fa fa-arrow-left"></i></span>
               <span class="btn-inner--text">Kembali</span>
             </a>
@@ -48,7 +34,23 @@
         </div>
       </div>
       
-    
+        @if ($errors->any())
+        <div class="alert alert-danger m-3" role="alert">
+          <h4>Error</h4>
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+        </div>
+        @endif
+
+
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success m-3" role="alert">
+          <h4>Success</h4>
+          {{ $message }}
+         </div>
+        @endif
+
       <div class="card-body p-3">
         <div class="row">
           <div class="col-md-12 mb-md-0 mb-4">

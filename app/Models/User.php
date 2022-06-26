@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $primaryKey = 'id';
     protected $fillable = [
         'name',
         'username',
@@ -35,6 +36,12 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    
+    //relasi cover gambar
+    public function cover_gambar()
+    {
+       return $this->belongsTo(Cover_gambar::class, 'id','user_id');
+    }
 
     /**
      * The attributes that should be cast.
