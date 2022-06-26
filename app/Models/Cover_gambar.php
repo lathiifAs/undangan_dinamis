@@ -21,20 +21,11 @@ class cover_gambar extends Authenticatable
     protected $fillable = [
         'user_id',
         'gambar_nama'
-        
-        
     ];
 
     public function user()
     {
-       return $this->belongsTo(User::class, 'id','user_id');
-    }
-
-    //hapus gambar
-    function delete_image()
-    {
-        $this->gambar_nama && file_exists(public_path('images' . $this->gambar_nama));
-        unlink(public_path('images' . $this->gambar_nama));
+       return $this->hasMany(User::class, 'id','user_id');
     }
    
 
