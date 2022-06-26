@@ -78,39 +78,30 @@ class CustomerController extends Controller
 
     public function updatecoverFoto(Request $request, Cover_gambar $cover)
     {
-        $id = $request->id;
-        
         
         $request->validate([
             'filename' => 'required',
-            'filename.*' => 'mimes:doc,docx,PDF,pdf,jpg,jpeg,png|max:2000'
+            'filename.*' => 'mimes:doc,docx,PDF,pdf,jpg,jpeg,png,file|max:2000'
         ]);
         
 
 
-        if ($request->file('filename')) {  
-            if($request->gambar_lama){
-                //$cover->delete_image();
-                Storage::delete(public_path('images'),$request->gambar_lama);
-            } 
-            
-
+       if($request->file('filename')){
+        if($request->gambar_lama){
+            Storage::delete($request->gambar_lama);  
+        }
+ 
             $filename = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('filename')->getClientOriginalName());
             $request->file('filename')->move(public_path('images'), $filename);
-            $validasi['user_id']= auth()->user()->id;
-            $validasi['gambar_nama']=$filename;
+            $validasi['user_id'] = auth()->user()->id;
+            $validasi['gambar_nama'] = $filename;
 
-            
-            Cover_gambar::where('id', $cover->id)
-            ->update($validasi);
-        }
+            $ganti = Cover_gambar::where('id', $request->id)->update([
+                'user_id' => auth()->user()->id,
+                'gambar_nama' => $filename
+            ]);
            
-
-               
-        
-       
-
-     
+        }     
         return view('manage.edit-coverFoto')->with('success', 'Post edited successfully');
     }
        
