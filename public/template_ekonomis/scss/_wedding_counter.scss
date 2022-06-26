@@ -1,0 +1,57 @@
+.counter_bg{
+    background-image: url(../img/counter_bg/counter_bg.png);
+}
+.weeding_countdown_area{
+    padding-top: 150px;
+    padding-bottom: 75px;
+    position: relative;
+    z-index: 9;
+    .flowaers_top{
+        position: absolute;
+        top: 102px;
+        right: -17px;
+    }
+    .flowaers_bottom{
+        position: absolute;
+        left: -144px;
+        bottom: -200px;
+    }
+    @media #{$mobile_device} {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .countdown_area{
+        padding: 35px 35px 50px 35px;
+        background-size: cover;
+        background-position: bottom;
+        
+        .countdown_wrap{
+            background: #fff;
+            justify-content: space-evenly;
+            padding-bottom: 36px;
+            // padding-top: 21px;
+            padding-top: 30px;
+            @media #{$mobile_device} {
+                display: block !important;
+            }
+            .single_countdown{
+                text-align: center;
+                h3{
+                    font-size: 60px;
+                    font-family: $font2;
+                    font-weight: 400;
+                    color: #C78665;
+                    margin-bottom: 17px;
+                    @media #{$mobile_device} {
+                        font-size: 30px;
+                    }
+                }
+                span{
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\PelayananController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\TestingController;
 
 
 /*
@@ -29,6 +30,9 @@ Route::get('/demo', function () {
     // return view('welcome');
     // return view('manage.landingpage');
 })->name('/demo');
+
+Route::get('/testing',  [TestingController::class, 'index'])->name('testing');
+
 // admin
 Route::middleware('customer')->group(function () {
     Route::get('/customer',  [CustomerController::class, 'index'])->name('customer');
@@ -40,7 +44,7 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/register',  [AdminController::class, 'register'])->name('admin/register');
     Route::get('/admin/inputData',  [AdminController::class, 'inputData'])->name('admin/inputData');
 
-    
+
     // Route::get('/user/profile', function () {
     //     // Uses first & second middleware...
     // });

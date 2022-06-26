@@ -1,0 +1,42 @@
+.program_bg_1{
+    background-image: url(../img/program_details/1.png);
+}
+.program_bg_2{
+    background-image: url(../img/program_details/2.png);
+}
+.program_bg_3{
+    background-image: url(../img/program_details/3.png);
+}
+.program_details_area{
+    padding-bottom: 120px;
+    padding-top: 120px;
+    .single_program{
+        padding: 20px;
+        margin-bottom: 30px;
+        background-position: center center;
+        background-size: cover;
+       .program_inner{
+           background: #fff;
+           padding: 57px 30px;
+           
+           span{
+            font-size: 20px;
+            font-weight: 400;
+            font-family: $font2;
+           }
+           h3{
+            font-family: $font1;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            color: #C78665;
+            margin-top: 10px;
+            margin-bottom: 10px;
+           }
+           p{
+            font-size: 16px;
+            font-family: $font1;
+           }
+       } 
+    }
+}
