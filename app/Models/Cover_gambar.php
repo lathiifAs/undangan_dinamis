@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class cover_gambar extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -19,13 +19,24 @@ class User extends Authenticatable
      */
     protected $primaryKey = 'id';
     protected $fillable = [
-        'name',
-        'username',
-        'no_hp',
-        'password',
-        'tgl_expired',
-        'jenis_paket'
+        'user_id',
+        'gambar_nama'
+        
+        
     ];
+
+    public function user()
+    {
+       return $this->belongsTo(User::class, 'id','user_id');
+    }
+
+    //hapus gambar
+    function delete_image()
+    {
+        $this->gambar_nama && file_exists(public_path('images' . $this->gambar_nama));
+        unlink(public_path('images' . $this->gambar_nama));
+    }
+   
 
     /**
      * The attributes that should be hidden for serialization.
@@ -36,12 +47,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-    
-    //relasi cover gambar
-    public function cover_gambar()
-    {
-       return $this->belongsTo(Cover_gambar::class, 'id','user_id');
-    }
 
     /**
      * The attributes that should be cast.

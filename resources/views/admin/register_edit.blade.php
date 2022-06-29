@@ -1,7 +1,6 @@
 @extends('template_admin.template')
 
 @section('konten')
-
 <div class="row">
     <div class="col-1">
         &nbsp;
@@ -20,10 +19,9 @@
       <div class="card-header pb-0 p-3">
         <div class="row">
           <div class="col-10 d-flex align-items-center">
-            <h6 class="mb-0 fs-3">Register</h6>
+            <h6 class="mb-0 fs-3">Edit register</h6>
           </div>
           
-         
 
           <div class="col-2">
             <a href="{{ ('/admin') }}" class="btn btn-icon btn-3 btn-outline-secondary" type="button" style="float: right;">
@@ -34,39 +32,40 @@
         </div>
       </div>
       
-        @if ($errors->any())
-        <div class="alert alert-danger m-3" role="alert">
-          <h4>Error</h4>
-          @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-          @endforeach
-        </div>
-        @endif
+      @if ($errors->any())
+      <div class="alert alert-danger m-3" role="alert">
+        <h4>Error</h4>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+      </div>
+      @endif
 
 
-        @if ($message = Session::get('success'))
-        <div class="alert alert-success m-3" role="alert">
-          <h4>Success</h4>
-          {{ $message }}
-         </div>
-        @endif
-
+      @if ($message = Session::get('success'))
+      <div class="alert alert-success m-3" role="alert">
+        <h4>Success</h4>
+        {{ $message }}
+       </div>
+      @endif
+    
       <div class="card-body p-3">
         <div class="row">
           <div class="col-md-12 mb-md-0 mb-4">
             <div class="card">
-                    <form action="{{route('admin/inputData')}}">
-
+                    <form action="{{ route('admin/updateData') }}" method="POST">
+                        <input class="form-control" type="hidden" name="id" value="{{ $edit->id }}">
+                        {{ csrf_field() }}
                     <div class="col-md-12 row">
                         <div class="col-md-6">
                             <label for="example-text-input" class="form-control-label">Nama</label>
-                            <input class="form-control" type="text" name="name" placeholder="Nama Lengkap">
+                            <input class="form-control" type="text" name="name" value="{{ $edit->name }}">
                         </div>
                         
                         <div class="row col-md-6">
-                            <label for="example-password-input" class="form-control-label">Password</label>
+                            <label for="example-password-input" class="form-control-label">Password <span class="opacity-5 text-dark"><i>(*Tidak perlu di isi jika tidak ingin dirubah)</i></span></label>
                             <div class="col-6">
-                                <input class="form-control" type="text" name="password" placeholder="Password" id="input_pass">
+                                <input class="form-control" type="text" name="password" id="input_pass">
                             </div>
                 
                             <div class="col-1">
@@ -77,12 +76,12 @@
                     <div class="row col-md-12"> 
                         <div class="col-md-6">
                             <label for="example-tel-input" class="form-control-label">Nomor Ponsel</label>
-                            <input class="form-control" type="tel" name="no_hp" placeholder="(9999)-999999999">
+                            <input class="form-control" type="tel" name="no_hp" value="{{ $edit->no_hp }}">
                         </div>
                     <div class="row col-md-6">
                         <div class="col-md-12">
                             <label for="example-datetime-local-input" class="form-control-label">Expired</label>
-                            <input class="form-control" type="date" name="expired" placeholder="Tanggal berakhir"> 
+                            <input class="form-control" type="date" name="expired" value="{{ $edit->tgl_expired }}">
                         </div>
                     </div>
                     </div>
@@ -90,14 +89,15 @@
                         <div class="col-md-6">
                             <label for="example-datetime-local-input" class="form-control-label">Paket</label>
                             <select class="form-select" label="Default select example" name="paket">
-                                <option selected>Pilih Paket</option>
-                                <option value="ekonimis">Ekonimis</option>
-                                <option value="spesial">Spesial</option>
+                                {{-- <option selected value="{{ $edit->jenis_paket }}">{{ $edit->jenis_paket }}</option> --}}
+                                <option value="ekonomis" @if ( $edit->jenis_paket == 'ekonomis') selected @endif>Ekonimis</option>
+                                <option value="spesial" @if ( $edit->jenis_paket == 'spesial') selected @endif>Spesial</option>
                               </select>
                             
                     </div>
+               
                     <div class="row col-md-12 mt-4">
-                        <span><button class="btn btn-icon btn-3 btn-dark" style="float: right;" type="submit" >Kirim</button></span> 
+                        <span><button class="btn btn-icon btn-3 btn-dark" style="float: right;" type="submit" >Update</button></span> 
                     </div>
                 </form>
             </div>

@@ -34,8 +34,17 @@ Route::get('/demo', function () {
 Route::get('/testing',  [TestingController::class, 'index'])->name('testing');
 
 // admin
+
+// customer
 Route::middleware('customer')->group(function () {
     Route::get('/customer',  [CustomerController::class, 'index'])->name('customer');
+// customer foto
+    Route::get('/customer/coverFoto/',  [CustomerController::class, 'coverFoto'])->name('customer/coverFoto');
+    Route::get('/customer/editcoverFoto', [CustomerController::class, 'editcoverFoto'])->name('customer/editcoverFoto');
+    Route::post('/customer/updatecoverFoto', [CustomerController::class, 'updatecoverFoto'])->name('customer/updatecoverFoto');
+    Route::post('/customer/uploadFoto',  [CustomerController::class, 'uploadFoto'])->name('customer/uploadFoto');
+
+
 });
 
 // admin
@@ -43,32 +52,15 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin',  [AdminController::class, 'index'])->name('admin');
     Route::get('/admin/register',  [AdminController::class, 'register'])->name('admin/register');
     Route::get('/admin/inputData',  [AdminController::class, 'inputData'])->name('admin/inputData');
+    Route::get('/admin/editData/{id}',  [AdminController::class, 'editData'])->name('admin/editData');
+    Route::post('/admin/updateData/',  [AdminController::class, 'updateData'])->name('admin/updateData');
+    Route::post('/admin/hapus/', [AdminController::class, 'destroy'])->name('admin/hapus');
 
 
     // Route::get('/user/profile', function () {
     //     // Uses first & second middleware...
     // });
 });
-
-
-// // rt
-// Route::middleware('rt')->group(function () {
-//     Route::get('/rt',  [RtPelayananController::class, 'index'])->name('rt');
-//     Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
-//     Route::get('/rt/pelayanan/add',  [RtPelayananController::class, 'add'])->name('rt/pelayanan/add');
-//     Route::post('/rt/pelayanan/add',  [RtPelayananController::class, 'add_process'])->name('rt/pelayanan/add');
-//     // Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
-//     // Route::get('/rt/pelayanan',  [RtPelayananController::class, 'index'])->name('rt/pelayanan');
-
-//     Route::get('/rt/master_warga',  [RtMasterWargaController::class, 'index'])->name('rt/master_warga');
-//     Route::get('/rt/master_warga_rt',  [RtMasterWargaController::class, 'getWargaRt'])->name('rt/master_warga_rt');
-//     Route::get('/rt/master_warga/add',  [RtMasterWargaController::class, 'add'])->name('rt/master_warga/add');
-//     Route::post('/rt/master_warga/add',  [RtMasterWargaController::class, 'add_process'])->name('rt/master_warga/add');
-//     Route::post('/rt/master_warga/import',  [RtMasterWargaController::class, 'importData'])->name('rt/master_warga/import');
-
-
-
-// });
 
 
 

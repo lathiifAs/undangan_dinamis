@@ -22,7 +22,7 @@
             <h6 class="mb-0">Daftar Pelanggan</h6>
           </div>
           <div class="col-2">
-            <a href="{{ ('admin/register') }}" class="btn btn-icon btn-3 btn-primary"   style="float: right;" type="button">
+            <a href="{{ ('admin/register') }}" class="btn btn-icon btn-3 btn-scondary"   style="float: right;" type="button">
                 <span class="btn-inner--icon"><i  class="fa fa-plus mr-1"></i></span>
               <span class="btn-inner--text">Tambah</span>
             </a>
@@ -40,13 +40,13 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No.</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pelanggan</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Paket / Expired</th>
-                        <th class="text-secondary opacity-7"></th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
                       </tr>
                     </thead>
                     <tbody>
                         @forelse ($data as $key => $dt)
                         <tr>
-                            <td class="text-xs mb-0 text-center">
+                            <td class="text-xs mb-0">
                                 {{ $key+1 }}.
                             </td>
                             <td>
@@ -61,18 +61,31 @@
                               </div>
                             </td>
                             <td>
-                              <p class="text-xs font-weight-bold mb-0">{{ ucfirst(trans($dt->jenis_paket)) }}</p>
+                              <p class="text-xs font-weight-bold mb-0">{{ ($dt->jenis_paket) }}</p>
                               <span class="text-secondary text-xs font-weight-bold @if (date('Y-m-d') > date($dt->tgl_expired))
                                 text-danger
                               @endif"> {{ date('j F, Y', strtotime($dt->tgl_expired)) }}</span>
                             </td>
-                            <td style=" text-align: center">
-                                <form onsubmit="return confirm('Apakah Anda Yakin ?');" method="POST">
+                            <td >
+                              
+                              <div class="d-flex px-2 py-1">
+                                <div>
+                                      <input type="hidden" name="id" value="{{ $dt->id }}">
+                                      <a href="{{  route('admin/editData', $dt->id) }}" class="btn btn-dark text-xs mb-0 p-2"><i class="fa fa-edit"></i></a>
+                                 
+                                </div>
+                                <div class="d-flex flex-column justify-content-center">
+                                  <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ ('admin/hapus/') }}" method="POST">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="id" value="{{ $dt->id }}">
-                                <button type="submit" class="btn btn-danger text-xs mb-0 p-2"><i class="fa fa-trash"></i></button>
-                                </form>
-                            </td>
+                                    <button type="submit" class="btn btn-danger text-xs mb-0 p-2"><i class="fa fa-trash"></i></button>
+                                  </form>
+                                </div>
+                              </div>
+
+                            
+                          </td>
+                        
                         </tr>
                         @empty
                         <tr>
