@@ -54,9 +54,9 @@
                                 </div>
                                 <div class="col-9">
                                     
-                                    <form method="POST" action="{{ ('updatecoverFoto') }}" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ URL('customer/updatecoverFoto') }}" enctype="multipart/form-data">
                                         @csrf      
-                                                
+                                        <input type="hidden" class="form-control" name="id" value="{{ auth()->user()->cover_gambar->id }}" required>           
                                     <input type="hidden" class="form-control" name="user_id" value="{{ auth()->user()->id }}" required> 
                                     <input type="hidden" class="form-control" name="gambar_lama" value="{{ auth()->user()->cover_gambar->gambar_nama }}" required>
                                     <input type="file" class="form-control" name="filename" id="image" onchange="previewImage()"  required>
