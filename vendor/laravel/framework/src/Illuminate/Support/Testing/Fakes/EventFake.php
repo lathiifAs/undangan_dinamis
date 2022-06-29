@@ -53,7 +53,7 @@ class EventFake implements Dispatcher
      * Assert if an event has a listener attached to it.
      *
      * @param  string  $expectedEvent
-     * @param  string  $expectedListener
+     * @param  string|array  $expectedListener
      * @return void
      */
     public function assertListening($expectedEvent, $expectedListener)
@@ -65,8 +65,12 @@ class EventFake implements Dispatcher
             if (is_string($actualListener) && Str::contains($actualListener, '@')) {
                 $actualListener = Str::parseCallback($actualListener);
 
-                if (is_string($expectedListener) && ! Str::contains($expectedListener, '@')) {
-                    $expectedListener = [$expectedListener, 'handle'];
+                if (is_string($expectedListener)) {
+                    if (Str::contains($expectedListener, '@')) {
+                        $expectedListener = Str::parseCallback($expectedListener);
+                    } else {
+                        $expectedListener = [$expectedListener, 'handle'];
+                    }
                 }
             }
 

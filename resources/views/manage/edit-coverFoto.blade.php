@@ -5,7 +5,7 @@
 @section('konten')
     <!-- End Navbar -->
     <div class="container-fluid">
-        <div class="page-header min-height-250 border-radius-xl mt-4" 
+        <div class="page-header min-height-250 border-radius-xl mt-4"
         style="background-image: url('admin_template/assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
             <span class="mask bg-gradient-primary opacity-6"></span>
         </div>
@@ -48,46 +48,66 @@
                                 </div>
                             </div>
 
+                            @if ($errors->any())
+                            <div class="alert alert-danger m-3" role="alert">
+                                <h4>Error</h4>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </div>
+                            @endif
+
+
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success m-3" role="alert">
+                                    <h4>Success</h4>
+                                    {{ $message }}
+                                </div>
+                            @endif
+
                             <div class="row">
                                 <div class="col-3">
                                     <label class="">Upload foto</label>
                                 </div>
-                                <div class="col-9">
-                                    
-                                    <form method="POST" action="{{ URL('customer/updatecoverFoto') }}" enctype="multipart/form-data">
-                                        @csrf      
-                                        <input type="hidden" class="form-control" name="id" value="{{ auth()->user()->cover_gambar->id }}" required>           
-                                    <input type="hidden" class="form-control" name="user_id" value="{{ auth()->user()->id }}" required> 
-                                    <input type="hidden" class="form-control" name="gambar_lama" value="{{ auth()->user()->cover_gambar->gambar_nama }}" required>
-                                    <input type="file" class="form-control" name="filename" id="image" onchange="previewImage()"  required>
-                                    
-                                    
-                                    <button type="submit" class="btn btn-primary mt-2">
-                                                    {{ __('Upload') }}
-                                    </button>  
+                                <div class="row">
+                                    <div class="col-12 justify-content-center">
+                                        <div>
+                                            <img src="{{ asset($data->gambar_path.$data->gambar_nama) }}"  class="card-img-top">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                           
-                            <div class="row">
-                                <div class="col-12 justify-content-center">
-                                    <div>
-                                        <img src="{{ asset('images/'.auth()->user()->cover_gambar->gambar_nama) }}"  class="card-img-top">
+                                <div class="col-12 row mt-2">
+
+                                    <form method="POST" action="{{ URL('customer/updatecoverFoto') }}" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" class="form-control" name="id" value="{{ $data->id }}" required>
+                                    <input type="hidden" class="form-control" name="gambar_path_lama" value="{{ $data->gambar_path }}" required>
+                                    <input type="hidden" class="form-control" name="gambar_lama" value="{{ $data->gambar_nama }}" required>
+
+                                    <input type="file" class="form-control" name="filename" id="image" onchange="previewImage()"  required>
+
+                                    <div class="col-lg-3"  style="text-align: right">
+                                        <button type="submit" class="btn btn-primary mt-2">
+                                            {{ __('Upload') }}
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>      
+
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     @push('custom-scripts')
 <script>
-    function previewImage{   
+    function previewImage{
     const image = document.querySelector('#image');
     const imgPreview = document.querySelector('.img-preview');
-    
+
     imgPreview.style.display = 'block';
     const oFReader = new fileReader();
     oFReader.readAsDataURL(image.files[0]);

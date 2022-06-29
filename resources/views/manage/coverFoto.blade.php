@@ -5,7 +5,7 @@
 @section('konten')
     <!-- End Navbar -->
     <div class="container-fluid">
-        <div class="page-header min-height-250 border-radius-xl mt-4" 
+        <div class="page-header min-height-250 border-radius-xl mt-4"
         style="background-image: url('admin_template/assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
             <span class="mask bg-gradient-primary opacity-6"></span>
         </div>
@@ -48,46 +48,64 @@
                                 </div>
                             </div>
 
-                            @if (empty(auth()->user()->cover_gambar->user_id))
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="">Upload foto</label>
-                                </div>
-                                <div class="col-9">
-                                    
-                                    <form method="POST" action="{{ ('/customer/uploadFoto') }}" enctype="multipart/form-data">
-                                        @csrf      
-                                                
-                                    <input type="hidden" class="form-control" name="user_id" value="{{ auth()->user()->id }}" required> 
-                                                         
-                                    <input type="file" class="form-control" name="filename" id="image" onchange="previewImage()"  required>
-                                    
-                                    
-                                    <button type="submit" class="btn btn-primary mt-2">
-                                                    {{ __('Upload') }}
-                                    </button>  
-                                </div>
-                            </div>
-                            @else
-                            <div class="py-2" style="text-align: center">
-                            <span class="">Selamat gambar cover anda sudah terisi...</span>
+                            @if ($errors->any())
+                            <div class="alert alert-danger m-3" role="alert">
+                                <h4>Error</h4>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
                             </div>
                             @endif
 
+
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success m-3" role="alert">
+                                    <h4>Success</h4>
+                                    {{ $message }}
+                                </div>
+                            @endif
+
+                            @if (empty($data->id))
+                            <div class="row">
+                                <div class="col-12">
+                                    <label class="">Upload background</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <img src="{{ URL('images/bg_default.jpg') }}" alt="" width="300px">
+                                    <center><i><sup>(Foto default)</sup></i></center>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12 row">
+
+                                    <form method="POST" action="{{ ('/customer/uploadFoto') }}" enctype="multipart/form-data">
+                                        @csrf
+                                    <input type="hidden" class="form-control" name="acara_id" value="{{ $acara_id }}" required>
+
+                                    <input type="file" class="form-control" name="filename" id="image" onchange="previewImage()"  required>
+
+
+                                    <div class="col-lg-3" style="text-align: right">
+                                        <button type="submit" class="btn btn-primary mt-2">
+                                            {{ __('Upload') }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            @else
                             <div class="row">
                                 <div class="col-12 justify-content-center">
-                                    @if (!empty(auth()->user()->cover_gambar->user_id))
                                     <div>
-                                        <img src="{{ asset('images/'.auth()->user()->cover_gambar->gambar_nama) }}"  class="card-img-top">
+                                        <img src="{{ asset($data->gambar_path.$data->gambar_nama) }}"  class="card-img-top">
                                     </div>
                                     <div class="row">
                                         <div class="col-12 mt-3" >
                                             <input type="hidden" name="id" value="">
-                                                <a href="{{ URL('customer/editcoverFoto') }}" class="btn btn-dark p-2 text-xs mb-0 col-12" style=""><i class="fa fa-edit">  Edit</i></a>
+                                                <a href="{{ URL('customer/editcoverFoto/'.$data->id) }}" class="btn btn-dark p-2 text-xs mb-0 col-12" style=""><i class="fa fa-edit">  Edit</i></a>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="row">
-                                        <div class="col-12 mt-1">  
+                                        <div class="col-12 mt-1">
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="('')" method="POST">
                                                 {{ csrf_field() }}
                                             <input type="hidden" name="id" value="">
@@ -95,29 +113,26 @@
                                         </div>
                                     </div>
 
-                                    @else
-                                    <div>
-                                        <img src="https://source.unsplash.com/500x500/?wedding" class="card-img-top">
-                                    </div>
-                                    @endif  
-                                
-                              
+
+
                                 </div>
                             </div>
-                        </div>      
+                            @endif
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     @push('custom-scripts')
 <script>
-    function previewImage{   
+    function previewImage{
 
     const image = document.querySelector('#image');
     const imgPreview = document.querySelector('.img-preview');
-    
+
     imgPreview.style.display = 'block';
     const oFReader = new fileReader();
     oFReader.readAsDataURL(image.files[0]);

@@ -40,7 +40,7 @@ Route::middleware('customer')->group(function () {
     Route::get('/customer',  [CustomerController::class, 'index'])->name('customer');
 // customer foto
     Route::get('/customer/coverFoto/',  [CustomerController::class, 'coverFoto'])->name('customer/coverFoto');
-    Route::get('/customer/editcoverFoto', [CustomerController::class, 'editcoverFoto'])->name('customer/editcoverFoto');
+    Route::get('/customer/editcoverFoto/{id}', [CustomerController::class, 'editcoverFoto'])->name('customer/editcoverFoto');
     Route::post('/customer/updatecoverFoto', [CustomerController::class, 'updatecoverFoto'])->name('customer/updatecoverFoto');
     Route::post('/customer/uploadFoto',  [CustomerController::class, 'uploadFoto'])->name('customer/uploadFoto');
 
