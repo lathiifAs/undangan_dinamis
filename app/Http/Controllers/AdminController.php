@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Acaras;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -36,42 +37,57 @@ class AdminController extends Controller
         return view('admin.register');
     }
 
-    public function inputData(Request $request){
-    $send = User::create([
-        'name' => $request['name'],
-        'password' => Hash::make($request['password']),
-        'no_hp' =>$request['no_hp'],
-        'tgl_expired' => $request['expired'],
-        'jenis_paket' => $request['paket'],
-        'username' => str_replace(' ','_', $request['name'])
-    ]);
-    if ($send) {
-        return redirect()
-            ->route('admin/register')
-            ->with([
-                'success' => 'Data berhasil dikirim.'
+    public function inputData(Request $request)
+    {
+        $send = User::create([
+            'name' => $request['name'],
+            'password' => Hash::make($request['password']),
+            'no_hp' => $request['no_hp'],
+            'tgl_expired' => $request['expired'],
+            'jenis_paket' => $request['paket'],
+            'username' => str_replace(' ', '_', $request['name'])
+        ]);
+        // simpan ke tabel user
+        if ($send) {
+            $user_id = $send->id;
+            // simpan ke tabel acara
+            $send_2 = Acaras::create([
+                'user_id' => $user_id,
             ]);
-    } else {
-        return redirect()
-            ->back()
-            ->withInput()
-            ->with([
-                'error' => 'Ada kesalahan, coba lagi !'
-            ]);
-
+            if ($send_2) {
+                return redirect()
+                    ->route('admin/register')
+                    ->with([
+                        'success' => 'Data berhasil dikirim.'
+                    ]);
+            } else {
+                return redirect()
+                    ->back()
+                    ->withInput()
+                    ->with([
+                        'error' => 'Ada kesalahan, coba lagi !'
+                    ]);
+            }
+        } else {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with([
+                    'error' => 'Ada kesalahan, coba lagi !'
+                ]);
+        }
     }
-    
-    //return view('admin.register');
-    }
 
-    //edit data register 
-    public function editData($id){
+    //edit data register
+    public function editData($id)
+    {
         $edit = User::findOrFail($id);
 
-        return view('admin/register_edit', compact('edit')); 
+        return view('admin/register_edit', compact('edit'));
     }
 
-    public function updateData(Request $request){
+    public function updateData(Request $request)
+    {
         $id = $request->id;
         $update = User::findOrFail($id);
         $edit = $update;
@@ -79,21 +95,21 @@ class AdminController extends Controller
         if (empty($request['password'])) {
             $update->update([
                 'name' => $request['name'],
-                'no_hp' =>$request['no_hp'],
+                'no_hp' => $request['no_hp'],
                 'tgl_expired' => $request['expired'],
                 'jenis_paket' => $request['paket'],
                 'username' => str_replace(' ', '_', $request['name']),
-           
+
             ]);
-        }else{
+        } else {
             $update->update([
                 'name' => $request['name'],
                 'password' => Hash::make($request['password']),
-                'no_hp' =>$request['no_hp'],
+                'no_hp' => $request['no_hp'],
                 'tgl_expired' => $request['expired'],
                 'jenis_paket' => $request['paket'],
                 'username' => str_replace(' ', '_', $request['name']),
-           
+
             ]);
         }
 
@@ -110,10 +126,9 @@ class AdminController extends Controller
                 ->with([
                     'error' => 'Ada kesalahan, coba lagi !'
                 ]);
-    
         }
 
-        //return redirect()->route('admin/register-edit'); 
+        //return redirect()->route('admin/register-edit');
     }
 
 
@@ -127,9 +142,9 @@ class AdminController extends Controller
         //if belum berjalan
         if ($hapus) {
             return redirect()
-            ->route('admin')
-            ->with([
-                'success' => 'Data berhasil di hapus'
+                ->route('admin')
+                ->with([
+                    'success' => 'Data berhasil di hapus'
                 ]);
         } else {
             return redirect()
@@ -139,7 +154,5 @@ class AdminController extends Controller
                     'error' => 'Error, coba lagi!'
                 ]);
         }
-
-        
     }
 }

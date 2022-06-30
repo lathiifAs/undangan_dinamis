@@ -9,6 +9,7 @@ class Acaras extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'user_id',
         'tanggal_wedding',
         'nama_laki',
         'nama_wanita',
