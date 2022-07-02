@@ -46,10 +46,12 @@
                                     <label for="">Gambar Cover</label>
                                 </div>
                                 <div class="col">
+                                    <a href="{{ URL('customer/undangan', $acara_id) }}">
                                     <div
                                         class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
                                         <i class="fas fa-newspaper opacity-10"></i>
                                     </div>
+                                    </a>
                                     <br>
                                     <label for="">Undangan</label>
                                 </div>
@@ -89,33 +91,6 @@
                                 <div class="col">
                                     <div
                                         class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                                        <i class="fas fa-calendar opacity-10"></i>
-                                    </div>
-                                    <br>
-                                    <label for="">Jadwal Acara</label>
-                                </div>
-                                <div class="col">
-                                    <div
-                                        class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                                        <i class="fa fa-map-marker opacity-10"></i>
-                                    </div>
-                                    <br>
-                                    <label for="">Lokasi Hajat</label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <div
-                                        class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                                        <i class="fas fa-list opacity-10"></i>
-                                    </div>
-                                    <br>
-                                    <label for="">Turut Undang</label>
-                                </div>
-                                <div class="col">
-                                    <div
-                                        class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
                                         <i class="fas fa-credit-card opacity-10"></i>
                                     </div>
                                     <br>
@@ -137,6 +112,7 @@
                                     <label for="">Ucapan</label>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col">
                                     <div
@@ -153,6 +129,11 @@
                                     </div>
                                     <br>
                                     <label for="">Lagu Undangan</label>
+                                </div>
+                                <div class="col">
+                                </div>
+                                <div class="col">
+
                                 </div>
                             </div>
                             {{-- <div class="row mt-4">

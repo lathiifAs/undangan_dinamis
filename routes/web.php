@@ -44,7 +44,8 @@ Route::middleware('customer')->group(function () {
     Route::post('/customer/updatecoverFoto', [CustomerController::class, 'updatecoverFoto'])->name('customer/updatecoverFoto');
     Route::post('/customer/uploadFoto',  [CustomerController::class, 'uploadFoto'])->name('customer/uploadFoto');
 
-
+    Route::get('/customer/undangan/{id}',  [CustomerController::class, 'undangan'])->name('customer/undangan');
+    Route::post('/customer/update-undangan',  [CustomerController::class, 'updateUndangan'])->name('customer/update-undangan');
 });
 
 // admin
