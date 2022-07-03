@@ -44,8 +44,13 @@ Route::middleware('customer')->group(function () {
     Route::post('/customer/updatecoverFoto', [CustomerController::class, 'updatecoverFoto'])->name('customer/updatecoverFoto');
     Route::post('/customer/uploadFoto',  [CustomerController::class, 'uploadFoto'])->name('customer/uploadFoto');
 
+    // undangan
     Route::get('/customer/undangan/{id}',  [CustomerController::class, 'undangan'])->name('customer/undangan');
     Route::post('/customer/update-undangan',  [CustomerController::class, 'updateUndangan'])->name('customer/update-undangan');
+
+    // love story
+    Route::get('/customer/love-story/{id}',  [CustomerController::class, 'loveStory'])->name('customer/love-story');
+    Route::post('/customer/update-love-story',  [CustomerController::class, 'updateLoveStory'])->name('customer/update-love-story');
 });
 
 // admin

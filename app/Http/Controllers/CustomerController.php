@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Acaras;
 use App\Models\cover_gambar;
 use App\Models\CoverFoto;
+use App\Models\Love_stories;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -251,6 +252,105 @@ class CustomerController extends Controller
                 ]);
         }
 
+    }
+
+    public function loveStory($id)
+    {
+        $data = Love_stories::where('acara_id', $id)->get();
+        // dd($data);
+        $newData = [];
+        foreach ($data as $key => $value) {
+            $newData[$value['jenis_story']] = $value['isi'];
+        }
+        // dd($newData);
+        // die;
+        $data = $newData;
+        $acara_id = $id;
+        return view('manage.love_story', compact('data', 'acara_id'));
+    }
+
+    public function updateLoveStory(Request $request)
+    {
+        $id = $request->acara_id;
+        $data = Love_stories::where('acara_id', $id)->get();
+        // jika data sudah ada
+        if (!empty($data)) {
+            foreach ($data as $key => $value) {
+                // get data sesuai jenis story
+                $data = Love_stories::where('acara_id', $id)
+                        ->where('jenis_story', $value['jenis_story'])->first();
+                // update data
+                $data->update([
+                    'isi' => $request[$value['jenis_story']]
+                ]);
+            }
+            if ($data) {
+                return redirect()
+                    ->route('customer/love-story', $id)
+                    ->with([
+                        'success' => 'New send has been created successfully'
+                    ]);
+            } else {
+                return redirect()
+                    ->back()
+                    ->withInput()
+                    ->with([
+                        'error' => 'Some problem occurred, please try again'
+                    ]);
+            }
+        }else{
+            // tambah data
+            if (!empty($request->pertemuan)) {
+                $send = Love_stories::create(
+                    [
+                        'acara_id' => $id,
+                        'jenis_story' => 'pertemuan',
+                        'isi' => $request['pertemuan'],
+                    ]
+                );
+            }
+            if (!empty($request->pacaran)) {
+                $send = Love_stories::create(
+                    [
+                        'acara_id' => $id,
+                        'jenis_story' => 'pacaran',
+                        'isi' => $request->pacaran,
+                    ]
+                );
+            }
+            if (!empty($request->tunangan)) {
+                $send = Love_stories::create(
+                    [
+                        'acara_id' => $id,
+                        'jenis_story' => 'tunangan',
+                        'isi' => $request->tunangan,
+                    ]
+                );
+            }
+            if (!empty($request->lamaran)) {
+                $send = Love_stories::create(
+                    [
+                        'acara_id' => $id,
+                        'jenis_story' => 'lamaran',
+                        'isi' => $request->lamaran,
+                    ]
+                );
+            }
+            if ($send) {
+                return redirect()
+                    ->route('customer/love-story', $id)
+                    ->with([
+                        'success' => 'New send has been created successfully'
+                    ]);
+            } else {
+                return redirect()
+                    ->back()
+                    ->withInput()
+                    ->with([
+                        'error' => 'Some problem occurred, please try again'
+                    ]);
+            }
+        }
     }
 
 }

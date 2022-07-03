@@ -56,18 +56,20 @@
                                     <label for="">Undangan</label>
                                 </div>
                                 <div class="col">
-                                    <div
-                                        class="icon icon-shape icon-lg shadow text-center border-radius-lg
-                                        @if (auth()->user()->jenis_paket == 'ekonomis')
-                                            bg-gradient-secondary btn-tooltip
-                                        @else
-                                            bg-gradient-primary
-                                        @endif "
-                                            @if (auth()->user()->jenis_paket == 'ekonomis')
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hanya Tersedia di Paket Spesial" data-container="body" data-animation="true"
-                                            @endif >
-                                        <i class="fas fa-book opacity-10"></i>
-                                    </div>
+                                    @if (auth()->user()->jenis_paket == 'ekonomis')
+                                        <div
+                                        class="icon icon-shape icon-lg shadow text-center border-radius-lg bg-gradient-secondary btn-tooltip"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hanya Tersedia di Paket Spesial" data-container="body" data-animation="true">
+                                            <i class="fas fa-book opacity-10"></i>
+                                        </div>
+                                    @else
+                                        <a href="{{ URL('customer/love-story', $acara_id) }}">
+                                            <div
+                                                class="icon icon-shape icon-lg shadow text-center border-radius-lg bg-gradient-primary">
+                                                <i class="fas fa-book opacity-10"></i>
+                                            </div>
+                                        </a>
+                                    @endif
                                     <br>
                                     <label for="">Cerita Cinta</label>
                                 </div>
